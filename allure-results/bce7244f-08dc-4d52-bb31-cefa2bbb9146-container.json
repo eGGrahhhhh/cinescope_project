@@ -1,0 +1,1 @@
+{"uuid":"bce7244f-08dc-4d52-bb31-cefa2bbb9146","name":"testCanNotRegisterSameNewUser()","children":["e7e8980e-8e92-4553-aee6-a61937464acb"],"befores":[{"name":"setUp","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1743194060373,"stop":1743194060970}],"afters":[],"start":1743194060317,"stop":1743194064771}
