@@ -6,9 +6,9 @@ plugins {
 group = "org.example"
 version = "1.0-SNAPSHOT"
 
-repositories {
-    mavenCentral()
-}
+//repositories {
+//    mavenCentral()
+//}
 
 dependencies {
     implementation("com.codeborne:selenide:7.7.3")
@@ -27,11 +27,11 @@ tasks.test {
     useJUnitPlatform()
 }
 
-tasks.withType<JavaCompile>().configureEach {
-    options.encoding = "UTF-8"
-}
-
-extensions.findByName("buildScan")?.withGroovyBuilder {
-    setProperty("termsOfServiceUrl", "https://gradle.com/terms-of-service")
-    setProperty("termsOfServiceAgree", "yes")
-}
+//tasks.withType<JavaCompile>().configureEach {
+//    options.encoding = "UTF-8"
+//}
+//
+//extensions.findByName("buildScan")?.withGroovyBuilder {
+//    setProperty("termsOfServiceUrl", "https://gradle.com/terms-of-service")
+//    setProperty("termsOfServiceAgree", "yes")
+//}

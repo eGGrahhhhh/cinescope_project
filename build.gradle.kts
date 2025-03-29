@@ -8,12 +8,17 @@ repositories {
     mavenCentral()
 }
 
-tasks.withType<JavaCompile>().configureEach {
-    options.encoding = "UTF-8"
-}
-
 allprojects {
     apply(plugin = "io.qameta.allure")
+
+    repositories {
+        mavenCentral()
+    }
+
+
+    tasks.withType<JavaCompile> { //tasks.withType<JavaCompile>().configureEach
+        options.encoding = "UTF-8"
+    }
 
     tasks.withType<Test> {
         useJUnitPlatform()
@@ -21,8 +26,15 @@ allprojects {
 
         testLogging {
             showStandardStreams = true
-            events("started", "skipped", "failed")
+            events("started", "skipped", "passed", "failed")
+
             exceptionFormat = TestExceptionFormat.FULL
         }
+        outputs.upToDateWhen { false }
+    }
+
+    extensions.findByName("buildScan")?.withGroovyBuilder {
+        setProperty("termsOfServiceUrl", "https://gradle.com/terms-of-service")
+        setProperty("termsOfServiceAgree", "yes")
     }
 }
