@@ -56,6 +56,20 @@ allure.api.addTranslation('de', {
     }
 });
 
+allure.api.addTranslation('nl', {
+    tab: {
+        behaviors: {
+            name: 'Functionaliteit'
+        }
+    },
+    widget: {
+        behaviors: {
+            name: 'Features en story’s',
+            showAll: 'Toon alle'
+        }
+    }
+});
+
 allure.api.addTranslation('he', {
     tab: {
         behaviors: {
@@ -75,10 +89,10 @@ allure.api.addTranslation('br', {
         behaviors: {
             name: 'Comportamentos'
         }
-    }, 
+    },
     widget: {
         behaviors: {
-            name: 'Funcionalidades por história', 
+            name: 'Funcionalidades por história',
             showAll: 'Mostrar tudo'
         }
     }
@@ -125,6 +139,92 @@ allure.api.addTranslation('kr', {
         }
     }
 });
+
+allure.api.addTranslation('fr', {
+    tab: {
+        behaviors: {
+            name: 'Comportements'
+        }
+    },
+    widget: {
+        behaviors: {
+            name: 'Thèmes par histoires',
+            showAll: 'Montrer tout'
+        }
+    }
+});
+
+allure.api.addTranslation('pl', {
+    tab: {
+        behaviors: {
+            name: 'Zachowania'
+        }
+    },
+    widget: {
+        behaviors: {
+            name: 'Funkcje według historii',
+            showAll: 'pokaż wszystko'
+        }
+    }
+});
+
+allure.api.addTranslation('az', {
+    tab: {
+        behaviors: {
+            name: 'Davranışlar'
+        }
+    },
+    widget: {
+        behaviors: {
+            name: 'Hekayələr üzrə xüsusiyyətlər',
+            showAll: 'hamısını göstər'
+        }
+    }
+});
+
+allure.api.addTranslation('sv', {
+    tab: {
+        behaviors: {
+            name: 'Beteenden'
+        }
+    },
+    widget: {
+        behaviors: {
+            name: 'Funktioner efter user stories',
+            showAll: 'visa allt'
+        }
+    }
+});
+
+allure.api.addTranslation('isv', {
+    tab: {
+        behaviors: {
+            name: 'Funkcionalnost',
+        }
+    },
+    widget: {
+        behaviors: {
+            name: 'Funkcionalnost',
+            showAll: 'pokaži vsěčto',
+        }
+    }
+});
+
+
+allure.api.addTranslation('ka', {
+    tab: {
+        behaviors: {
+            name: 'ფუნქციონალი',
+        }
+    },
+    widget: {
+        behaviors: {
+            name: 'ფუნქციონალი',
+            showAll: 'ყველას ჩვენება',
+        }
+    }
+});
+
 
 allure.api.addTab('behaviors', {
     title: 'tab.behaviors.name', icon: 'fa fa-list',
