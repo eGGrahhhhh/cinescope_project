@@ -28,6 +28,8 @@ public class MyAllureSetup implements BeforeAllCallback {
         Configuration.browserCapabilities.setCapability("selenoid:options", options);
 
         SelenideLogger.addListener("AllureSelenide",
-                new AllureSelenide());
+                new AllureSelenide()
+                        .savePageSource(true)
+                        .screenshots(true));
     }
 }

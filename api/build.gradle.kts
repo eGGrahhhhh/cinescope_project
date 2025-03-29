@@ -3,16 +3,16 @@ import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 plugins {
     id("java")
     id("io.freefair.lombok") version "8.4"
-    // id("io.qameta.allure") version "2.12.0"
+     id("io.qameta.allure") version "2.12.0"
 
 }
 
 group = "org.example"
 version = "1.0-SNAPSHOT"
 
-//repositories {
-//    mavenCentral()
-//}
+repositories {
+    mavenCentral()
+}
 
 dependencies {
     implementation("org.projectlombok:lombok:1.18.34")
@@ -32,13 +32,13 @@ dependencies {
 
 }
 
-//tasks.test {
-//    useJUnitPlatform()
-//
-//    testLogging {
-//        showStandardStreams = true
-//        events("started", "skipped", "passed", "failed")
-//        exceptionFormat = TestExceptionFormat.FULL
-//    }
-//    outputs.upToDateWhen { false }
-//}
+tasks.test {
+    useJUnitPlatform()
+
+    testLogging {
+        showStandardStreams = true
+        events("started", "skipped", "passed", "failed")
+        exceptionFormat = TestExceptionFormat.FULL
+    }
+    outputs.upToDateWhen { false }
+}

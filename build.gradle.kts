@@ -22,7 +22,7 @@ allprojects {
 
     tasks.withType<Test> {
         useJUnitPlatform()
-        systemProperty("allure.results.directory", rootProject.file("allure-results"))
+        //systemProperty("allure.results.directory", rootProject.file("allure-results"))
 
         testLogging {
             showStandardStreams = true

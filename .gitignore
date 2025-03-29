@@ -1,3 +1,7 @@
 .idea
 .surefire-reports
 UI/build/reports
+build/allure
+.allure-results
+ui/build/allure-results
+api/build/allure-results
