@@ -1,4 +1,4 @@
-package com.ui;
+package com.cinescope.ui;
 
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;

@@ -1,3 +1,4 @@
+import com.cinescope.ui.*;
 import com.ui.*;
 import jdk.jfr.Description;
 import org.junit.jupiter.api.extension.ExtendWith;
