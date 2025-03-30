@@ -20,15 +20,16 @@ dependencies {
     implementation("io.rest-assured:rest-assured:5.5.0")
     implementation("com.fasterxml.jackson.core:jackson-databind:2.18.2")
     implementation("com.github.javafaker:javafaker:1.0.2")
-    implementation("org.slf4j:slf4j-simple:2.0.16")
+    //implementation("org.slf4j:slf4j-simple:2.0.16")
+    implementation("ch.qos.logback:logback-classic:1.5.16")
 
     implementation("com.codeborne:selenide:7.7.3")
 
     runtimeOnly("org.aspectj:aspectjweaver:1.9.23")
-    implementation("io.qameta.allure:allure-selenide:2.29.1")
-    implementation("io.qameta.allure:allure-junit5:2.29.1")
-    implementation("io.qameta.allure:allure-java-commons:2.29.1")
-    implementation("io.qameta.allure:allure-rest-assured:2.29.1")
+    implementation("io.qameta.allure:allure-selenide:2.29.0")
+    implementation("io.qameta.allure:allure-junit5:2.29.0")
+    implementation("io.qameta.allure:allure-java-commons:2.29.0")
+    implementation("io.qameta.allure:allure-rest-assured:2.29.0")
 
 }
 

@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class MyAllureSetup implements BeforeAllCallback {
+
     @Override
     public void beforeAll(ExtensionContext extensionContext) throws Exception {
 
