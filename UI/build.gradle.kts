@@ -18,10 +18,10 @@ dependencies {
     implementation("ch.qos.logback:logback-classic:1.5.16")
 
     runtimeOnly("org.aspectj:aspectjweaver:1.9.23")
-    testImplementation("io.qameta.allure:allure-selenide:2.29.0")
-    testImplementation("io.qameta.allure:allure-junit5:2.29.0")
-    testImplementation("io.qameta.allure:allure-java-commons:2.29.0")
-    testImplementation("io.qameta.allure:allure-rest-assured:2.29.0")
+    testImplementation("io.qameta.allure:allure-selenide:2.29.1")
+    testImplementation("io.qameta.allure:allure-junit5:2.29.1")
+    testImplementation("io.qameta.allure:allure-java-commons:2.29.1")
+    testImplementation("io.qameta.allure:allure-rest-assured:2.29.1")
 }
 
 tasks.test {

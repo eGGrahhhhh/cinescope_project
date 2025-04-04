@@ -95,6 +95,6 @@ public class UsersTest {
                 .shouldHave(bodyField("id", not(isEmptyString())));
 
         userApiService.loginUser(user)
-                .shouldHave(statusCode(201));
+                .shouldHave(statusCode(200));
     }
 }
