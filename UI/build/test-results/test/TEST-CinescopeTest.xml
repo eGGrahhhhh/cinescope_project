@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="CinescopeTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2025-04-04T18:09:32" hostname="PC" time="9.971">
+<testsuite name="CinescopeTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2025-04-04T19:29:32" hostname="PC" time="12.219">
   <properties/>
-  <testcase name="[1] ivan333@gmail.com, Qq12345678" classname="CinescopeTest" time="2.617"/>
-  <testcase name="[1] Qwe Rty Uio, wrewrwer@gmail.com, Qq12345678, ТQq12345678" classname="CinescopeTest" time="1.071"/>
-  <testcase name="[1] ivan333@gmail.com, Qq12345678, Тайна Коко, 1" classname="CinescopeTest" time="2.939"/>
-  <testcase name="[2] ivan333@gmail.com, Qq12345678, Темный рыцарь, 2" classname="CinescopeTest" time="3.235"/>
-  <system-out><![CDATA[21:09:31.883 [Test worker] DEBUG com.codeborne.selenide.impl.CiReportUrl -- Variable selenide.reportsUrl not found
-21:09:31.903 [Test worker] DEBUG com.codeborne.selenide.logevents.SelenideLogger -- Added listener 'AllureSelenide' to thread '1' (now it has 1 listeners)
-21:09:32.039 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins -- Using default implementation of com.codeborne.selenide.impl.WebDriverContainer: com.codeborne.selenide.WebDriverThreadLocalContainer
-21:09:32.050 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins -- Using default implementation of com.codeborne.selenide.impl.Photographer: com.codeborne.selenide.impl.WebdriverPhotographer
-21:09:32.052 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins -- Using default implementation of com.codeborne.selenide.impl.PageSourceExtractor: com.codeborne.selenide.impl.WebPageSourceExtractor
-21:09:32.063 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins -- Using default implementation of com.codeborne.selenide.impl.PageObjectFactory: com.codeborne.selenide.impl.SelenidePageFactory
-21:09:32.076 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins -- Using default implementation of com.codeborne.selenide.impl.WebElementSelector: com.codeborne.selenide.impl.WebElementSelector
-21:09:32.078 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins -- Using default implementation of com.codeborne.selenide.impl.ElementDescriber: com.codeborne.selenide.impl.SelenideElementDescriber
-21:09:32.217 [Test worker] INFO com.codeborne.selenide.WebDriverThreadLocalContainer -- No webdriver is bound to current thread: 1 - let's create a new webdriver
-21:09:32.232 [Test worker] DEBUG com.codeborne.selenide.drivercommands.CreateDriverCommand -- Creating webdriver in thread 1 (ip: 10.0.85.2, host: PC)...
-21:09:32.233 [Test worker] DEBUG com.codeborne.selenide.webdriver.WebDriverFactory -- browser=chrome
-21:09:32.234 [Test worker] DEBUG com.codeborne.selenide.webdriver.WebDriverFactory -- browser.version=null
-21:09:32.234 [Test worker] DEBUG com.codeborne.selenide.webdriver.WebDriverFactory -- remote=http://localhost:4444/wd/hub
-21:09:32.234 [Test worker] DEBUG com.codeborne.selenide.webdriver.WebDriverFactory -- browserSize=1366x768
-21:09:32.242 [Test worker] DEBUG com.codeborne.selenide.webdriver.AbstractChromiumDriverFactory -- Using chromium preferences: {credentials_enable_service=false, autofill.credit_card_enabled=false, autofill.profile_enabled=false, safebrowsing.enabled=true, plugins.always_open_pdf_externally=true, profile.default_content_setting_values.automatic_downloads=1, profile.password_manager_enabled=false, profile.password_manager_leak_detection=false}
-21:09:33.821 [Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory -- Selenide 7.7.3 / Selenium 4.29.0 / chrome 128.0.6613.137 linux
-21:09:33.821 [Test worker] DEBUG com.codeborne.selenide.drivercommands.CreateDriverCommand -- Created webdriver in thread 1: RemoteWebDriver -> RemoteWebDriver: chrome on linux (edf11bcf21f73f57d4e2232e56a1b20e), downloadsFolder: null
-21:09:33.823 [Test worker] DEBUG com.codeborne.selenide.drivercommands.DisposablesRegistry -- Register WebDriverInstance[threadId=1, config=StaticConfig, webDriver=RemoteWebDriver: chrome on linux (edf11bcf21f73f57d4e2232e56a1b20e), proxy=null, downloadsFolder=null] in 1 [size=1]
-21:09:33.837 [Test worker] DEBUG com.codeborne.selenide.drivercommands.DisposablesRegistry -- Add shutdown hook in 1 [size=1]
-21:09:34.127 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins -- Using default implementation of com.codeborne.selenide.commands.Clear: com.codeborne.selenide.commands.Clear
-21:09:34.159 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins -- Using default implementation of com.codeborne.selenide.impl.DownloadFileToFolder: com.codeborne.selenide.impl.DownloadFileToFolder
-21:09:34.162 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins -- Using default implementation of com.codeborne.selenide.impl.DownloadFileWithCdp: com.codeborne.selenide.impl.DownloadFileWithCdp
-21:09:34.167 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins -- Using default implementation of com.codeborne.selenide.commands.Commands: com.codeborne.selenide.commands.Commands
-21:09:34.211 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins -- Using default implementation of com.codeborne.selenide.ex.ErrorFormatter: com.codeborne.selenide.ex.SelenideErrorFormatter
+  <testcase name="[1] ivan333@gmail.com, Qq12345678" classname="CinescopeTest" time="4.867"/>
+  <testcase name="[1] Qwe Rty Uio, wrewrwer@gmail.com, Qq12345678, ТQq12345678" classname="CinescopeTest" time="1.114"/>
+  <testcase name="[1] ivan333@gmail.com, Qq12345678, Тайна Коко, 1" classname="CinescopeTest" time="3.016"/>
+  <testcase name="[2] ivan333@gmail.com, Qq12345678, Темный рыцарь, 2" classname="CinescopeTest" time="3.13"/>
+  <system-out><![CDATA[22:29:32.435 [Test worker] DEBUG com.codeborne.selenide.impl.CiReportUrl -- Variable selenide.reportsUrl not found
+22:29:32.450 [Test worker] DEBUG com.codeborne.selenide.logevents.SelenideLogger -- Added listener 'AllureSelenide' to thread '1' (now it has 1 listeners)
+22:29:32.587 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins -- Using default implementation of com.codeborne.selenide.impl.WebDriverContainer: com.codeborne.selenide.WebDriverThreadLocalContainer
+22:29:32.599 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins -- Using default implementation of com.codeborne.selenide.impl.Photographer: com.codeborne.selenide.impl.WebdriverPhotographer
+22:29:32.601 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins -- Using default implementation of com.codeborne.selenide.impl.PageSourceExtractor: com.codeborne.selenide.impl.WebPageSourceExtractor
+22:29:32.610 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins -- Using default implementation of com.codeborne.selenide.impl.PageObjectFactory: com.codeborne.selenide.impl.SelenidePageFactory
+22:29:32.632 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins -- Using default implementation of com.codeborne.selenide.impl.WebElementSelector: com.codeborne.selenide.impl.WebElementSelector
+22:29:32.635 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins -- Using default implementation of com.codeborne.selenide.impl.ElementDescriber: com.codeborne.selenide.impl.SelenideElementDescriber
+22:29:32.762 [Test worker] INFO com.codeborne.selenide.WebDriverThreadLocalContainer -- No webdriver is bound to current thread: 1 - let's create a new webdriver
+22:29:32.774 [Test worker] DEBUG com.codeborne.selenide.drivercommands.CreateDriverCommand -- Creating webdriver in thread 1 (ip: 10.0.85.2, host: PC)...
+22:29:32.775 [Test worker] DEBUG com.codeborne.selenide.webdriver.WebDriverFactory -- browser=chrome
+22:29:32.775 [Test worker] DEBUG com.codeborne.selenide.webdriver.WebDriverFactory -- browser.version=null
+22:29:32.775 [Test worker] DEBUG com.codeborne.selenide.webdriver.WebDriverFactory -- remote=http://localhost:4444/wd/hub
+22:29:32.775 [Test worker] DEBUG com.codeborne.selenide.webdriver.WebDriverFactory -- browserSize=1366x768
+22:29:32.781 [Test worker] DEBUG com.codeborne.selenide.webdriver.AbstractChromiumDriverFactory -- Using chromium preferences: {credentials_enable_service=false, autofill.credit_card_enabled=false, autofill.profile_enabled=false, safebrowsing.enabled=true, plugins.always_open_pdf_externally=true, profile.default_content_setting_values.automatic_downloads=1, profile.password_manager_enabled=false, profile.password_manager_leak_detection=false}
+22:29:36.462 [Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory -- Selenide 7.7.3 / Selenium 4.29.0 / chrome 128.0.6613.137 linux
+22:29:36.462 [Test worker] DEBUG com.codeborne.selenide.drivercommands.CreateDriverCommand -- Created webdriver in thread 1: RemoteWebDriver -> RemoteWebDriver: chrome on linux (4f7b4babc05f4583b9c9681016114af2), downloadsFolder: null
+22:29:36.463 [Test worker] DEBUG com.codeborne.selenide.drivercommands.DisposablesRegistry -- Register WebDriverInstance[threadId=1, config=StaticConfig, webDriver=RemoteWebDriver: chrome on linux (4f7b4babc05f4583b9c9681016114af2), proxy=null, downloadsFolder=null] in 1 [size=1]
+22:29:36.472 [Test worker] DEBUG com.codeborne.selenide.drivercommands.DisposablesRegistry -- Add shutdown hook in 1 [size=1]
+22:29:36.908 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins -- Using default implementation of com.codeborne.selenide.commands.Clear: com.codeborne.selenide.commands.Clear
+22:29:36.941 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins -- Using default implementation of com.codeborne.selenide.impl.DownloadFileToFolder: com.codeborne.selenide.impl.DownloadFileToFolder
+22:29:36.943 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins -- Using default implementation of com.codeborne.selenide.impl.DownloadFileWithCdp: com.codeborne.selenide.impl.DownloadFileWithCdp
+22:29:36.947 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins -- Using default implementation of com.codeborne.selenide.commands.Commands: com.codeborne.selenide.commands.Commands
+22:29:36.999 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins -- Using default implementation of com.codeborne.selenide.ex.ErrorFormatter: com.codeborne.selenide.ex.SelenideErrorFormatter
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
