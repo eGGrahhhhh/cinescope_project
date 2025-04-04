@@ -26,10 +26,10 @@ dependencies {
     implementation("com.codeborne:selenide:7.7.3")
 
     runtimeOnly("org.aspectj:aspectjweaver:1.9.23")
-    implementation("io.qameta.allure:allure-selenide:2.29.1")
-    implementation("io.qameta.allure:allure-junit5:2.29.1")
-    implementation("io.qameta.allure:allure-java-commons:2.29.1")
-    implementation("io.qameta.allure:allure-rest-assured:2.29.1")
+    testImplementation("io.qameta.allure:allure-selenide:2.29.0")
+    testImplementation("io.qameta.allure:allure-junit5:2.29.0")
+    testImplementation("io.qameta.allure:allure-java-commons:2.29.0")
+    testImplementation("io.qameta.allure:allure-rest-assured:2.29.0")
 
 }
 

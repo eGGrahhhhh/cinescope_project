@@ -29,7 +29,7 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">4</div>
+<div class="counter">0</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.427s</div>
+<div class="counter">9.862s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox failures" id="successRate">
-<div class="percent">0%</div>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,455 +61,13 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Failed tests</a>
+<a href="#tab0">Tests</a>
 </li>
 <li>
-<a href="#tab1">Tests</a>
-</li>
-<li>
-<a href="#tab2">Standard output</a>
+<a href="#tab1">Standard output</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
-<h2>Failed tests</h2>
-<div class="test">
-<a name="loginAndBuyTicketTest(String, String, String, String)[1]"></a>
-<h3 class="failures">[1] ivan333@gmail.com, Qq12345678, Тайна Коко, 1</h3>
-<span class="code">
-<pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: 'PC', ip: '10.0.85.2'
-Build info: version: '4.29.0', revision: '5fc1ec94cb'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
-selenide.remote: http://localhost:4444/wd/hub
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [null, newSession {capabilities=[Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 128.0, goog:chromeOptions: {args: [--proxy-bypass-list=&lt;-loopb..., --disable-dev-shm-usage, --disable-search-engine-cho..., --unsafely-disable-devtools..., --window-size=1366,768], excludeSwitches: [enable-automation, load-extension], extensions: [], prefs: {autofill.credit_card_enabled: false, autofill.profile_enabled: false, credentials_enable_service: false, plugins.always_open_pdf_externally: true, profile.default_content_setting_values.automatic_downloads: 1, profile.password_manager_enabled: false, profile.password_manager_leak_detection: false, safebrowsing.enabled: true}}, pageLoadStrategy: normal, selenoid:options: {enableLog: true, enableVNC: true, enableVideo: true}, unhandledPromptBehavior: accept}]}]
-selenide.url: https://cinescope.t-qa.ru/login
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 128.0, goog:chromeOptions: {args: [--proxy-bypass-list=&lt;-loopb..., --disable-dev-shm-usage, --disable-search-engine-cho..., --unsafely-disable-devtools..., --window-size=1366,768], excludeSwitches: [enable-automation, load-extension], extensions: [], prefs: {autofill.credit_card_enabled: false, autofill.profile_enabled: false, credentials_enable_service: false, plugins.always_open_pdf_externally: true, profile.default_content_setting_values.automatic_downloads: 1, profile.password_manager_enabled: false, profile.password_manager_leak_detection: false, safebrowsing.enabled: true}}, pageLoadStrategy: normal, selenoid:options: {enableLog: true, enableVNC: true, enableVideo: true}, unhandledPromptBehavior: accept}
-selenide.baseUrl: https://cinescope.t-qa.ru
-	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:563)
-	at app//org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:245)
-	at app//org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:174)
-	at app//com.codeborne.selenide.webdriver.RemoteDriverFactory.create(RemoteDriverFactory.java:22)
-	at app//com.codeborne.selenide.webdriver.WebDriverFactory.createWebDriverInstance(WebDriverFactory.java:102)
-	at app//com.codeborne.selenide.webdriver.WebDriverFactory.createWebDriver(WebDriverFactory.java:59)
-	at app//com.codeborne.selenide.drivercommands.CreateDriverCommand.lambda$createDriver$0(CreateDriverCommand.java:68)
-	at app//com.codeborne.selenide.logevents.SelenideLogger.wrap(SelenideLogger.java:128)
-	at app//com.codeborne.selenide.logevents.SelenideLogger.get(SelenideLogger.java:106)
-	at app//com.codeborne.selenide.drivercommands.CreateDriverCommand.createDriver(CreateDriverCommand.java:44)
-	at app//com.codeborne.selenide.WebDriverThreadLocalContainer.createDriver(WebDriverThreadLocalContainer.java:181)
-	at app//com.codeborne.selenide.WebDriverThreadLocalContainer.createDriver(WebDriverThreadLocalContainer.java:177)
-	at app//com.codeborne.selenide.WebDriverThreadLocalContainer.createAndRegisterDriver(WebDriverThreadLocalContainer.java:164)
-	at app//com.codeborne.selenide.WebDriverThreadLocalContainer.getAndCheckWebDriver(WebDriverThreadLocalContainer.java:130)
-	at app//com.codeborne.selenide.WebDriverRunner.getAndCheckWebDriver(WebDriverRunner.java:99)
-	at app//com.codeborne.selenide.StaticDriver.getAndCheckWebDriver(StaticDriver.java:41)
-	at app//com.codeborne.selenide.SelenideDriver.getAndCheckWebDriver(SelenideDriver.java:183)
-	at app//com.codeborne.selenide.drivercommands.Navigator.lambda$navigateTo$0(Navigator.java:67)
-	at app//com.codeborne.selenide.logevents.SelenideLogger.lambda$run$0(SelenideLogger.java:99)
-	at app//com.codeborne.selenide.logevents.SelenideLogger.wrap(SelenideLogger.java:128)
-	at app//com.codeborne.selenide.logevents.SelenideLogger.run(SelenideLogger.java:98)
-	at app//com.codeborne.selenide.drivercommands.Navigator.navigateTo(Navigator.java:65)
-	at app//com.codeborne.selenide.drivercommands.Navigator.open(Navigator.java:29)
-	at app//com.codeborne.selenide.SelenideDriver.open(SelenideDriver.java:86)
-	at app//com.codeborne.selenide.Selenide.open(Selenide.java:50)
-	at app//com.ui.LoginPage.open(LoginPage.java:12)
-	at app//CinescopeTest.loginAndBuyTicketTest(CinescopeTest.java:21)
-	at java.base@23.0.1/java.lang.reflect.Method.invoke(Method.java:580)
-	at app//io.qameta.allure.junit5.AllureJunit5.interceptTestTemplateMethod(AllureJunit5.java:59)
-	at java.base@23.0.1/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
-	at java.base@23.0.1/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:215)
-	at java.base@23.0.1/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:197)
-	at java.base@23.0.1/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:215)
-	at java.base@23.0.1/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
-	at java.base@23.0.1/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:215)
-	at java.base@23.0.1/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:215)
-	at java.base@23.0.1/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:215)
-	at java.base@23.0.1/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1709)
-	at java.base@23.0.1/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:807)
-	at java.base@23.0.1/java.util.stream.ReferencePipeline$7$1FlatMap.accept(ReferencePipeline.java:294)
-	at java.base@23.0.1/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:215)
-	at java.base@23.0.1/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:215)
-	at java.base@23.0.1/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:215)
-	at java.base@23.0.1/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1709)
-	at java.base@23.0.1/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:570)
-	at java.base@23.0.1/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560)
-	at java.base@23.0.1/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
-	at java.base@23.0.1/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
-	at java.base@23.0.1/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265)
-	at java.base@23.0.1/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:636)
-	at java.base@23.0.1/java.util.stream.ReferencePipeline$7$1FlatMap.accept(ReferencePipeline.java:294)
-	at java.base@23.0.1/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1709)
-	at java.base@23.0.1/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:570)
-	at java.base@23.0.1/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560)
-	at java.base@23.0.1/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
-	at java.base@23.0.1/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
-	at java.base@23.0.1/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265)
-	at java.base@23.0.1/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:636)
-	at java.base@23.0.1/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at java.base@23.0.1/java.util.ArrayList.forEach(ArrayList.java:1597)
-Caused by: java.io.UncheckedIOException: java.net.ConnectException
-	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:497)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
-	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.lambda$executeAsync$1(JdkHttpClient.java:384)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1575)
-Caused by: java.net.ConnectException
-	at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:956)
-	at java.net.http/jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:133)
-	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:456)
-	... 8 more
-Caused by: java.net.ConnectException
-	at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Utils.java:1082)
-	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:227)
-	at java.net.http/jdk.internal.net.http.PlainHttpConnection.checkRetryConnect(PlainHttpConnection.java:280)
-	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$2(PlainHttpConnection.java:238)
-	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:978)
-	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:955)
-	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:554)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1817)
-	... 3 more
-Caused by: java.nio.channels.ClosedChannelException
-	at java.base/sun.nio.ch.SocketChannelImpl.ensureOpen(SocketChannelImpl.java:204)
-	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:958)
-	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$1(PlainHttpConnection.java:210)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
-	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:212)
-	... 9 more
-</pre>
-</span>
-</div>
-<div class="test">
-<a name="loginAndBuyTicketTest(String, String, String, String)[2]"></a>
-<h3 class="failures">[2] ivan333@gmail.com, Qq12345678, Темный рыцарь, 2</h3>
-<span class="code">
-<pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: 'PC', ip: '10.0.85.2'
-Build info: version: '4.29.0', revision: '5fc1ec94cb'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
-selenide.remote: http://localhost:4444/wd/hub
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [null, newSession {capabilities=[Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 128.0, goog:chromeOptions: {args: [--proxy-bypass-list=&lt;-loopb..., --disable-dev-shm-usage, --disable-search-engine-cho..., --unsafely-disable-devtools..., --window-size=1366,768], excludeSwitches: [enable-automation, load-extension], extensions: [], prefs: {autofill.credit_card_enabled: false, autofill.profile_enabled: false, credentials_enable_service: false, plugins.always_open_pdf_externally: true, profile.default_content_setting_values.automatic_downloads: 1, profile.password_manager_enabled: false, profile.password_manager_leak_detection: false, safebrowsing.enabled: true}}, pageLoadStrategy: normal, selenoid:options: {enableLog: true, enableVNC: true, enableVideo: true}, unhandledPromptBehavior: accept}]}]
-selenide.url: https://cinescope.t-qa.ru/login
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 128.0, goog:chromeOptions: {args: [--proxy-bypass-list=&lt;-loopb..., --disable-dev-shm-usage, --disable-search-engine-cho..., --unsafely-disable-devtools..., --window-size=1366,768], excludeSwitches: [enable-automation, load-extension], extensions: [], prefs: {autofill.credit_card_enabled: false, autofill.profile_enabled: false, credentials_enable_service: false, plugins.always_open_pdf_externally: true, profile.default_content_setting_values.automatic_downloads: 1, profile.password_manager_enabled: false, profile.password_manager_leak_detection: false, safebrowsing.enabled: true}}, pageLoadStrategy: normal, selenoid:options: {enableLog: true, enableVNC: true, enableVideo: true}, unhandledPromptBehavior: accept}
-selenide.baseUrl: https://cinescope.t-qa.ru
-	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:563)
-	at app//org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:245)
-	at app//org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:174)
-	at app//com.codeborne.selenide.webdriver.RemoteDriverFactory.create(RemoteDriverFactory.java:22)
-	at app//com.codeborne.selenide.webdriver.WebDriverFactory.createWebDriverInstance(WebDriverFactory.java:102)
-	at app//com.codeborne.selenide.webdriver.WebDriverFactory.createWebDriver(WebDriverFactory.java:59)
-	at app//com.codeborne.selenide.drivercommands.CreateDriverCommand.lambda$createDriver$0(CreateDriverCommand.java:68)
-	at app//com.codeborne.selenide.logevents.SelenideLogger.wrap(SelenideLogger.java:128)
-	at app//com.codeborne.selenide.logevents.SelenideLogger.get(SelenideLogger.java:106)
-	at app//com.codeborne.selenide.drivercommands.CreateDriverCommand.createDriver(CreateDriverCommand.java:44)
-	at app//com.codeborne.selenide.WebDriverThreadLocalContainer.createDriver(WebDriverThreadLocalContainer.java:181)
-	at app//com.codeborne.selenide.WebDriverThreadLocalContainer.createDriver(WebDriverThreadLocalContainer.java:177)
-	at app//com.codeborne.selenide.WebDriverThreadLocalContainer.createAndRegisterDriver(WebDriverThreadLocalContainer.java:164)
-	at app//com.codeborne.selenide.WebDriverThreadLocalContainer.getAndCheckWebDriver(WebDriverThreadLocalContainer.java:130)
-	at app//com.codeborne.selenide.WebDriverRunner.getAndCheckWebDriver(WebDriverRunner.java:99)
-	at app//com.codeborne.selenide.StaticDriver.getAndCheckWebDriver(StaticDriver.java:41)
-	at app//com.codeborne.selenide.SelenideDriver.getAndCheckWebDriver(SelenideDriver.java:183)
-	at app//com.codeborne.selenide.drivercommands.Navigator.lambda$navigateTo$0(Navigator.java:67)
-	at app//com.codeborne.selenide.logevents.SelenideLogger.lambda$run$0(SelenideLogger.java:99)
-	at app//com.codeborne.selenide.logevents.SelenideLogger.wrap(SelenideLogger.java:128)
-	at app//com.codeborne.selenide.logevents.SelenideLogger.run(SelenideLogger.java:98)
-	at app//com.codeborne.selenide.drivercommands.Navigator.navigateTo(Navigator.java:65)
-	at app//com.codeborne.selenide.drivercommands.Navigator.open(Navigator.java:29)
-	at app//com.codeborne.selenide.SelenideDriver.open(SelenideDriver.java:86)
-	at app//com.codeborne.selenide.Selenide.open(Selenide.java:50)
-	at app//com.ui.LoginPage.open(LoginPage.java:12)
-	at app//CinescopeTest.loginAndBuyTicketTest(CinescopeTest.java:21)
-	at java.base@23.0.1/java.lang.reflect.Method.invoke(Method.java:580)
-	at app//io.qameta.allure.junit5.AllureJunit5.interceptTestTemplateMethod(AllureJunit5.java:59)
-	at java.base@23.0.1/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
-	at java.base@23.0.1/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:215)
-	at java.base@23.0.1/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:197)
-	at java.base@23.0.1/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:215)
-	at java.base@23.0.1/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
-	at java.base@23.0.1/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:215)
-	at java.base@23.0.1/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:215)
-	at java.base@23.0.1/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:215)
-	at java.base@23.0.1/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1709)
-	at java.base@23.0.1/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:807)
-	at java.base@23.0.1/java.util.stream.ReferencePipeline$7$1FlatMap.accept(ReferencePipeline.java:294)
-	at java.base@23.0.1/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:215)
-	at java.base@23.0.1/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:215)
-	at java.base@23.0.1/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:215)
-	at java.base@23.0.1/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1709)
-	at java.base@23.0.1/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:570)
-	at java.base@23.0.1/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560)
-	at java.base@23.0.1/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
-	at java.base@23.0.1/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
-	at java.base@23.0.1/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265)
-	at java.base@23.0.1/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:636)
-	at java.base@23.0.1/java.util.stream.ReferencePipeline$7$1FlatMap.accept(ReferencePipeline.java:294)
-	at java.base@23.0.1/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1709)
-	at java.base@23.0.1/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:570)
-	at java.base@23.0.1/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560)
-	at java.base@23.0.1/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
-	at java.base@23.0.1/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
-	at java.base@23.0.1/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265)
-	at java.base@23.0.1/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:636)
-	at java.base@23.0.1/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at java.base@23.0.1/java.util.ArrayList.forEach(ArrayList.java:1597)
-Caused by: java.io.UncheckedIOException: java.net.ConnectException
-	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:497)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
-	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.lambda$executeAsync$1(JdkHttpClient.java:384)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1575)
-Caused by: java.net.ConnectException
-	at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:956)
-	at java.net.http/jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:133)
-	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:456)
-	... 8 more
-Caused by: java.net.ConnectException
-	at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Utils.java:1082)
-	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:227)
-	at java.net.http/jdk.internal.net.http.PlainHttpConnection.checkRetryConnect(PlainHttpConnection.java:280)
-	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$2(PlainHttpConnection.java:238)
-	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:978)
-	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:955)
-	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:554)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1817)
-	... 3 more
-Caused by: java.nio.channels.ClosedChannelException
-	at java.base/sun.nio.ch.SocketChannelImpl.ensureOpen(SocketChannelImpl.java:204)
-	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:958)
-	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$1(PlainHttpConnection.java:210)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
-	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:212)
-	... 9 more
-</pre>
-</span>
-</div>
-<div class="test">
-<a name="loginTest(String, String)[1]"></a>
-<h3 class="failures">[1] ivan333@gmail.com, Qq12345678</h3>
-<span class="code">
-<pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: 'PC', ip: '10.0.85.2'
-Build info: version: '4.29.0', revision: '5fc1ec94cb'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
-selenide.remote: http://localhost:4444/wd/hub
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [null, newSession {capabilities=[Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 128.0, goog:chromeOptions: {args: [--proxy-bypass-list=&lt;-loopb..., --disable-dev-shm-usage, --disable-search-engine-cho..., --unsafely-disable-devtools..., --window-size=1366,768], excludeSwitches: [enable-automation, load-extension], extensions: [], prefs: {autofill.credit_card_enabled: false, autofill.profile_enabled: false, credentials_enable_service: false, plugins.always_open_pdf_externally: true, profile.default_content_setting_values.automatic_downloads: 1, profile.password_manager_enabled: false, profile.password_manager_leak_detection: false, safebrowsing.enabled: true}}, pageLoadStrategy: normal, selenoid:options: {enableLog: true, enableVNC: true, enableVideo: true}, unhandledPromptBehavior: accept}]}]
-selenide.url: https://cinescope.t-qa.ru/login
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 128.0, goog:chromeOptions: {args: [--proxy-bypass-list=&lt;-loopb..., --disable-dev-shm-usage, --disable-search-engine-cho..., --unsafely-disable-devtools..., --window-size=1366,768], excludeSwitches: [enable-automation, load-extension], extensions: [], prefs: {autofill.credit_card_enabled: false, autofill.profile_enabled: false, credentials_enable_service: false, plugins.always_open_pdf_externally: true, profile.default_content_setting_values.automatic_downloads: 1, profile.password_manager_enabled: false, profile.password_manager_leak_detection: false, safebrowsing.enabled: true}}, pageLoadStrategy: normal, selenoid:options: {enableLog: true, enableVNC: true, enableVideo: true}, unhandledPromptBehavior: accept}
-selenide.baseUrl: https://cinescope.t-qa.ru
-	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:563)
-	at app//org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:245)
-	at app//org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:174)
-	at app//com.codeborne.selenide.webdriver.RemoteDriverFactory.create(RemoteDriverFactory.java:22)
-	at app//com.codeborne.selenide.webdriver.WebDriverFactory.createWebDriverInstance(WebDriverFactory.java:102)
-	at app//com.codeborne.selenide.webdriver.WebDriverFactory.createWebDriver(WebDriverFactory.java:59)
-	at app//com.codeborne.selenide.drivercommands.CreateDriverCommand.lambda$createDriver$0(CreateDriverCommand.java:68)
-	at app//com.codeborne.selenide.logevents.SelenideLogger.wrap(SelenideLogger.java:128)
-	at app//com.codeborne.selenide.logevents.SelenideLogger.get(SelenideLogger.java:106)
-	at app//com.codeborne.selenide.drivercommands.CreateDriverCommand.createDriver(CreateDriverCommand.java:44)
-	at app//com.codeborne.selenide.WebDriverThreadLocalContainer.createDriver(WebDriverThreadLocalContainer.java:181)
-	at app//com.codeborne.selenide.WebDriverThreadLocalContainer.createDriver(WebDriverThreadLocalContainer.java:177)
-	at app//com.codeborne.selenide.WebDriverThreadLocalContainer.createAndRegisterDriver(WebDriverThreadLocalContainer.java:164)
-	at app//com.codeborne.selenide.WebDriverThreadLocalContainer.getAndCheckWebDriver(WebDriverThreadLocalContainer.java:130)
-	at app//com.codeborne.selenide.WebDriverRunner.getAndCheckWebDriver(WebDriverRunner.java:99)
-	at app//com.codeborne.selenide.StaticDriver.getAndCheckWebDriver(StaticDriver.java:41)
-	at app//com.codeborne.selenide.SelenideDriver.getAndCheckWebDriver(SelenideDriver.java:183)
-	at app//com.codeborne.selenide.drivercommands.Navigator.lambda$navigateTo$0(Navigator.java:67)
-	at app//com.codeborne.selenide.logevents.SelenideLogger.lambda$run$0(SelenideLogger.java:99)
-	at app//com.codeborne.selenide.logevents.SelenideLogger.wrap(SelenideLogger.java:128)
-	at app//com.codeborne.selenide.logevents.SelenideLogger.run(SelenideLogger.java:98)
-	at app//com.codeborne.selenide.drivercommands.Navigator.navigateTo(Navigator.java:65)
-	at app//com.codeborne.selenide.drivercommands.Navigator.open(Navigator.java:29)
-	at app//com.codeborne.selenide.SelenideDriver.open(SelenideDriver.java:86)
-	at app//com.codeborne.selenide.Selenide.open(Selenide.java:50)
-	at app//com.ui.LoginPage.open(LoginPage.java:12)
-	at app//CinescopeTest.loginTest(CinescopeTest.java:44)
-	at java.base@23.0.1/java.lang.reflect.Method.invoke(Method.java:580)
-	at app//io.qameta.allure.junit5.AllureJunit5.interceptTestTemplateMethod(AllureJunit5.java:59)
-	at java.base@23.0.1/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
-	at java.base@23.0.1/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:215)
-	at java.base@23.0.1/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:197)
-	at java.base@23.0.1/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:215)
-	at java.base@23.0.1/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
-	at java.base@23.0.1/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:215)
-	at java.base@23.0.1/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:215)
-	at java.base@23.0.1/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:215)
-	at java.base@23.0.1/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1709)
-	at java.base@23.0.1/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:807)
-	at java.base@23.0.1/java.util.stream.ReferencePipeline$7$1FlatMap.accept(ReferencePipeline.java:294)
-	at java.base@23.0.1/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:215)
-	at java.base@23.0.1/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:215)
-	at java.base@23.0.1/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:215)
-	at java.base@23.0.1/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1709)
-	at java.base@23.0.1/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:570)
-	at java.base@23.0.1/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560)
-	at java.base@23.0.1/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
-	at java.base@23.0.1/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
-	at java.base@23.0.1/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265)
-	at java.base@23.0.1/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:636)
-	at java.base@23.0.1/java.util.stream.ReferencePipeline$7$1FlatMap.accept(ReferencePipeline.java:294)
-	at java.base@23.0.1/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1709)
-	at java.base@23.0.1/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:570)
-	at java.base@23.0.1/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560)
-	at java.base@23.0.1/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
-	at java.base@23.0.1/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
-	at java.base@23.0.1/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265)
-	at java.base@23.0.1/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:636)
-	at java.base@23.0.1/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at java.base@23.0.1/java.util.ArrayList.forEach(ArrayList.java:1597)
-Caused by: java.io.UncheckedIOException: java.net.ConnectException
-	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:497)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
-	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.lambda$executeAsync$1(JdkHttpClient.java:384)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1575)
-Caused by: java.net.ConnectException
-	at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:956)
-	at java.net.http/jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:133)
-	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:456)
-	... 8 more
-Caused by: java.net.ConnectException
-	at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Utils.java:1082)
-	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:227)
-	at java.net.http/jdk.internal.net.http.PlainHttpConnection.checkRetryConnect(PlainHttpConnection.java:280)
-	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$2(PlainHttpConnection.java:238)
-	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:978)
-	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:955)
-	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:554)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1817)
-	... 3 more
-Caused by: java.nio.channels.ClosedChannelException
-	at java.base/sun.nio.ch.SocketChannelImpl.ensureOpen(SocketChannelImpl.java:204)
-	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:958)
-	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$1(PlainHttpConnection.java:210)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
-	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:212)
-	... 9 more
-</pre>
-</span>
-</div>
-<div class="test">
-<a name="registerTest(String, String, String, String)[1]"></a>
-<h3 class="failures">[1] Qwe Rty Uio, wrewrwer@gmail.com, Qq12345678, ТQq12345678</h3>
-<span class="code">
-<pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: 'PC', ip: '10.0.85.2'
-Build info: version: '4.29.0', revision: '5fc1ec94cb'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
-selenide.remote: http://localhost:4444/wd/hub
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [null, newSession {capabilities=[Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 128.0, goog:chromeOptions: {args: [--proxy-bypass-list=&lt;-loopb..., --disable-dev-shm-usage, --disable-search-engine-cho..., --unsafely-disable-devtools..., --window-size=1366,768], excludeSwitches: [enable-automation, load-extension], extensions: [], prefs: {autofill.credit_card_enabled: false, autofill.profile_enabled: false, credentials_enable_service: false, plugins.always_open_pdf_externally: true, profile.default_content_setting_values.automatic_downloads: 1, profile.password_manager_enabled: false, profile.password_manager_leak_detection: false, safebrowsing.enabled: true}}, pageLoadStrategy: normal, selenoid:options: {enableLog: true, enableVNC: true, enableVideo: true}, unhandledPromptBehavior: accept}]}]
-selenide.url: https://cinescope.t-qa.ru/register
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 128.0, goog:chromeOptions: {args: [--proxy-bypass-list=&lt;-loopb..., --disable-dev-shm-usage, --disable-search-engine-cho..., --unsafely-disable-devtools..., --window-size=1366,768], excludeSwitches: [enable-automation, load-extension], extensions: [], prefs: {autofill.credit_card_enabled: false, autofill.profile_enabled: false, credentials_enable_service: false, plugins.always_open_pdf_externally: true, profile.default_content_setting_values.automatic_downloads: 1, profile.password_manager_enabled: false, profile.password_manager_leak_detection: false, safebrowsing.enabled: true}}, pageLoadStrategy: normal, selenoid:options: {enableLog: true, enableVNC: true, enableVideo: true}, unhandledPromptBehavior: accept}
-selenide.baseUrl: https://cinescope.t-qa.ru
-	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:563)
-	at app//org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:245)
-	at app//org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:174)
-	at app//com.codeborne.selenide.webdriver.RemoteDriverFactory.create(RemoteDriverFactory.java:22)
-	at app//com.codeborne.selenide.webdriver.WebDriverFactory.createWebDriverInstance(WebDriverFactory.java:102)
-	at app//com.codeborne.selenide.webdriver.WebDriverFactory.createWebDriver(WebDriverFactory.java:59)
-	at app//com.codeborne.selenide.drivercommands.CreateDriverCommand.lambda$createDriver$0(CreateDriverCommand.java:68)
-	at app//com.codeborne.selenide.logevents.SelenideLogger.wrap(SelenideLogger.java:128)
-	at app//com.codeborne.selenide.logevents.SelenideLogger.get(SelenideLogger.java:106)
-	at app//com.codeborne.selenide.drivercommands.CreateDriverCommand.createDriver(CreateDriverCommand.java:44)
-	at app//com.codeborne.selenide.WebDriverThreadLocalContainer.createDriver(WebDriverThreadLocalContainer.java:181)
-	at app//com.codeborne.selenide.WebDriverThreadLocalContainer.createDriver(WebDriverThreadLocalContainer.java:177)
-	at app//com.codeborne.selenide.WebDriverThreadLocalContainer.createAndRegisterDriver(WebDriverThreadLocalContainer.java:164)
-	at app//com.codeborne.selenide.WebDriverThreadLocalContainer.getAndCheckWebDriver(WebDriverThreadLocalContainer.java:130)
-	at app//com.codeborne.selenide.WebDriverRunner.getAndCheckWebDriver(WebDriverRunner.java:99)
-	at app//com.codeborne.selenide.StaticDriver.getAndCheckWebDriver(StaticDriver.java:41)
-	at app//com.codeborne.selenide.SelenideDriver.getAndCheckWebDriver(SelenideDriver.java:183)
-	at app//com.codeborne.selenide.drivercommands.Navigator.lambda$navigateTo$0(Navigator.java:67)
-	at app//com.codeborne.selenide.logevents.SelenideLogger.lambda$run$0(SelenideLogger.java:99)
-	at app//com.codeborne.selenide.logevents.SelenideLogger.wrap(SelenideLogger.java:128)
-	at app//com.codeborne.selenide.logevents.SelenideLogger.run(SelenideLogger.java:98)
-	at app//com.codeborne.selenide.drivercommands.Navigator.navigateTo(Navigator.java:65)
-	at app//com.codeborne.selenide.drivercommands.Navigator.open(Navigator.java:29)
-	at app//com.codeborne.selenide.SelenideDriver.open(SelenideDriver.java:86)
-	at app//com.codeborne.selenide.Selenide.open(Selenide.java:50)
-	at app//com.ui.RegisterPage.open(RegisterPage.java:13)
-	at app//CinescopeTest.registerTest(CinescopeTest.java:35)
-	at java.base@23.0.1/java.lang.reflect.Method.invoke(Method.java:580)
-	at app//io.qameta.allure.junit5.AllureJunit5.interceptTestTemplateMethod(AllureJunit5.java:59)
-	at java.base@23.0.1/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
-	at java.base@23.0.1/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:215)
-	at java.base@23.0.1/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:197)
-	at java.base@23.0.1/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:215)
-	at java.base@23.0.1/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
-	at java.base@23.0.1/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:215)
-	at java.base@23.0.1/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:215)
-	at java.base@23.0.1/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:215)
-	at java.base@23.0.1/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1709)
-	at java.base@23.0.1/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:807)
-	at java.base@23.0.1/java.util.stream.ReferencePipeline$7$1FlatMap.accept(ReferencePipeline.java:294)
-	at java.base@23.0.1/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:215)
-	at java.base@23.0.1/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:215)
-	at java.base@23.0.1/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:215)
-	at java.base@23.0.1/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1709)
-	at java.base@23.0.1/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:570)
-	at java.base@23.0.1/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560)
-	at java.base@23.0.1/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
-	at java.base@23.0.1/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
-	at java.base@23.0.1/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265)
-	at java.base@23.0.1/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:636)
-	at java.base@23.0.1/java.util.stream.ReferencePipeline$7$1FlatMap.accept(ReferencePipeline.java:294)
-	at java.base@23.0.1/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1709)
-	at java.base@23.0.1/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:570)
-	at java.base@23.0.1/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560)
-	at java.base@23.0.1/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
-	at java.base@23.0.1/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
-	at java.base@23.0.1/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265)
-	at java.base@23.0.1/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:636)
-	at java.base@23.0.1/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at java.base@23.0.1/java.util.ArrayList.forEach(ArrayList.java:1597)
-Caused by: java.io.UncheckedIOException: java.net.ConnectException
-	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:497)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
-	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.lambda$executeAsync$1(JdkHttpClient.java:384)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1575)
-Caused by: java.net.ConnectException
-	at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:956)
-	at java.net.http/jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:133)
-	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:456)
-	... 8 more
-Caused by: java.net.ConnectException
-	at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Utils.java:1082)
-	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:227)
-	at java.net.http/jdk.internal.net.http.PlainHttpConnection.checkRetryConnect(PlainHttpConnection.java:280)
-	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$2(PlainHttpConnection.java:238)
-	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:978)
-	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:955)
-	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:554)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1817)
-	... 3 more
-Caused by: java.nio.channels.ClosedChannelException
-	at java.base/sun.nio.ch.SocketChannelImpl.ensureOpen(SocketChannelImpl.java:204)
-	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:958)
-	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$1(PlainHttpConnection.java:210)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
-	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:212)
-	... 9 more
-</pre>
-</span>
-</div>
-</div>
-<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -521,70 +79,58 @@ Caused by: java.nio.channels.ClosedChannelException
 </tr>
 </thead>
 <tr>
-<td class="failures">[1] ivan333@gmail.com, Qq12345678, Тайна Коко, 1</td>
-<td class="failures">loginAndBuyTicketTest(String, String, String, String)[1]</td>
-<td class="failures">0.026s</td>
-<td class="failures">failed</td>
+<td class="success">[1] ivan333@gmail.com, Qq12345678, Тайна Коко, 1</td>
+<td class="success">loginAndBuyTicketTest(String, String, String, String)[1]</td>
+<td class="success">2.939s</td>
+<td class="success">passed</td>
 </tr>
 <tr>
-<td class="failures">[2] ivan333@gmail.com, Qq12345678, Темный рыцарь, 2</td>
-<td class="failures">loginAndBuyTicketTest(String, String, String, String)[2]</td>
-<td class="failures">0.015s</td>
-<td class="failures">failed</td>
+<td class="success">[2] ivan333@gmail.com, Qq12345678, Темный рыцарь, 2</td>
+<td class="success">loginAndBuyTicketTest(String, String, String, String)[2]</td>
+<td class="success">3.235s</td>
+<td class="success">passed</td>
 </tr>
 <tr>
-<td class="failures">[1] ivan333@gmail.com, Qq12345678</td>
-<td class="failures">loginTest(String, String)[1]</td>
-<td class="failures">0.369s</td>
-<td class="failures">failed</td>
+<td class="success">[1] ivan333@gmail.com, Qq12345678</td>
+<td class="success">loginTest(String, String)[1]</td>
+<td class="success">2.617s</td>
+<td class="success">passed</td>
 </tr>
 <tr>
-<td class="failures">[1] Qwe Rty Uio, wrewrwer@gmail.com, Qq12345678, ТQq12345678</td>
-<td class="failures">registerTest(String, String, String, String)[1]</td>
-<td class="failures">0.017s</td>
-<td class="failures">failed</td>
+<td class="success">[1] Qwe Rty Uio, wrewrwer@gmail.com, Qq12345678, ТQq12345678</td>
+<td class="success">registerTest(String, String, String, String)[1]</td>
+<td class="success">1.071s</td>
+<td class="success">passed</td>
 </tr>
 </table>
 </div>
-<div id="tab2" class="tab">
+<div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>23:26:12.463 [Test worker] DEBUG com.codeborne.selenide.impl.CiReportUrl -- Variable selenide.reportsUrl not found
-23:26:12.479 [Test worker] DEBUG com.codeborne.selenide.logevents.SelenideLogger -- Added listener 'AllureSelenide' to thread '1' (now it has 1 listeners)
-23:26:12.612 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins -- Using default implementation of com.codeborne.selenide.impl.WebDriverContainer: com.codeborne.selenide.WebDriverThreadLocalContainer
-23:26:12.621 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins -- Using default implementation of com.codeborne.selenide.impl.Photographer: com.codeborne.selenide.impl.WebdriverPhotographer
-23:26:12.622 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins -- Using default implementation of com.codeborne.selenide.impl.PageSourceExtractor: com.codeborne.selenide.impl.WebPageSourceExtractor
-23:26:12.631 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins -- Using default implementation of com.codeborne.selenide.impl.PageObjectFactory: com.codeborne.selenide.impl.SelenidePageFactory
-23:26:12.656 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins -- Using default implementation of com.codeborne.selenide.impl.WebElementSelector: com.codeborne.selenide.impl.WebElementSelector
-23:26:12.657 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins -- Using default implementation of com.codeborne.selenide.impl.ElementDescriber: com.codeborne.selenide.impl.SelenideElementDescriber
-23:26:12.776 [Test worker] INFO com.codeborne.selenide.WebDriverThreadLocalContainer -- No webdriver is bound to current thread: 1 - let's create a new webdriver
-23:26:12.790 [Test worker] DEBUG com.codeborne.selenide.drivercommands.CreateDriverCommand -- Creating webdriver in thread 1 (ip: 10.0.85.2, host: PC)...
-23:26:12.791 [Test worker] DEBUG com.codeborne.selenide.webdriver.WebDriverFactory -- browser=chrome
-23:26:12.791 [Test worker] DEBUG com.codeborne.selenide.webdriver.WebDriverFactory -- browser.version=null
-23:26:12.791 [Test worker] DEBUG com.codeborne.selenide.webdriver.WebDriverFactory -- remote=http://localhost:4444/wd/hub
-23:26:12.791 [Test worker] DEBUG com.codeborne.selenide.webdriver.WebDriverFactory -- browserSize=1366x768
-23:26:12.797 [Test worker] DEBUG com.codeborne.selenide.webdriver.AbstractChromiumDriverFactory -- Using chromium preferences: {credentials_enable_service=false, autofill.credit_card_enabled=false, autofill.profile_enabled=false, safebrowsing.enabled=true, plugins.always_open_pdf_externally=true, profile.default_content_setting_values.automatic_downloads=1, profile.password_manager_enabled=false, profile.password_manager_leak_detection=false}
-23:26:13.229 [Test worker] INFO com.codeborne.selenide.WebDriverThreadLocalContainer -- No webdriver is bound to current thread: 1 - let's create a new webdriver
-23:26:13.229 [Test worker] DEBUG com.codeborne.selenide.drivercommands.CreateDriverCommand -- Creating webdriver in thread 1 (ip: 10.0.85.2, host: PC)...
-23:26:13.229 [Test worker] DEBUG com.codeborne.selenide.webdriver.WebDriverFactory -- browser=chrome
-23:26:13.229 [Test worker] DEBUG com.codeborne.selenide.webdriver.WebDriverFactory -- browser.version=null
-23:26:13.229 [Test worker] DEBUG com.codeborne.selenide.webdriver.WebDriverFactory -- remote=http://localhost:4444/wd/hub
-23:26:13.229 [Test worker] DEBUG com.codeborne.selenide.webdriver.WebDriverFactory -- browserSize=1366x768
-23:26:13.229 [Test worker] DEBUG com.codeborne.selenide.webdriver.AbstractChromiumDriverFactory -- Using chromium preferences: {credentials_enable_service=false, autofill.credit_card_enabled=false, autofill.profile_enabled=false, safebrowsing.enabled=true, plugins.always_open_pdf_externally=true, profile.default_content_setting_values.automatic_downloads=1, profile.password_manager_enabled=false, profile.password_manager_leak_detection=false}
-23:26:13.257 [Test worker] INFO com.codeborne.selenide.WebDriverThreadLocalContainer -- No webdriver is bound to current thread: 1 - let's create a new webdriver
-23:26:13.257 [Test worker] DEBUG com.codeborne.selenide.drivercommands.CreateDriverCommand -- Creating webdriver in thread 1 (ip: 10.0.85.2, host: PC)...
-23:26:13.257 [Test worker] DEBUG com.codeborne.selenide.webdriver.WebDriverFactory -- browser=chrome
-23:26:13.257 [Test worker] DEBUG com.codeborne.selenide.webdriver.WebDriverFactory -- browser.version=null
-23:26:13.257 [Test worker] DEBUG com.codeborne.selenide.webdriver.WebDriverFactory -- remote=http://localhost:4444/wd/hub
-23:26:13.257 [Test worker] DEBUG com.codeborne.selenide.webdriver.WebDriverFactory -- browserSize=1366x768
-23:26:13.257 [Test worker] DEBUG com.codeborne.selenide.webdriver.AbstractChromiumDriverFactory -- Using chromium preferences: {credentials_enable_service=false, autofill.credit_card_enabled=false, autofill.profile_enabled=false, safebrowsing.enabled=true, plugins.always_open_pdf_externally=true, profile.default_content_setting_values.automatic_downloads=1, profile.password_manager_enabled=false, profile.password_manager_leak_detection=false}
-23:26:13.289 [Test worker] INFO com.codeborne.selenide.WebDriverThreadLocalContainer -- No webdriver is bound to current thread: 1 - let's create a new webdriver
-23:26:13.289 [Test worker] DEBUG com.codeborne.selenide.drivercommands.CreateDriverCommand -- Creating webdriver in thread 1 (ip: 10.0.85.2, host: PC)...
-23:26:13.290 [Test worker] DEBUG com.codeborne.selenide.webdriver.WebDriverFactory -- browser=chrome
-23:26:13.290 [Test worker] DEBUG com.codeborne.selenide.webdriver.WebDriverFactory -- browser.version=null
-23:26:13.290 [Test worker] DEBUG com.codeborne.selenide.webdriver.WebDriverFactory -- remote=http://localhost:4444/wd/hub
-23:26:13.290 [Test worker] DEBUG com.codeborne.selenide.webdriver.WebDriverFactory -- browserSize=1366x768
-23:26:13.290 [Test worker] DEBUG com.codeborne.selenide.webdriver.AbstractChromiumDriverFactory -- Using chromium preferences: {credentials_enable_service=false, autofill.credit_card_enabled=false, autofill.profile_enabled=false, safebrowsing.enabled=true, plugins.always_open_pdf_externally=true, profile.default_content_setting_values.automatic_downloads=1, profile.password_manager_enabled=false, profile.password_manager_leak_detection=false}
+<pre>21:09:31.883 [Test worker] DEBUG com.codeborne.selenide.impl.CiReportUrl -- Variable selenide.reportsUrl not found
+21:09:31.903 [Test worker] DEBUG com.codeborne.selenide.logevents.SelenideLogger -- Added listener 'AllureSelenide' to thread '1' (now it has 1 listeners)
+21:09:32.039 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins -- Using default implementation of com.codeborne.selenide.impl.WebDriverContainer: com.codeborne.selenide.WebDriverThreadLocalContainer
+21:09:32.050 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins -- Using default implementation of com.codeborne.selenide.impl.Photographer: com.codeborne.selenide.impl.WebdriverPhotographer
+21:09:32.052 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins -- Using default implementation of com.codeborne.selenide.impl.PageSourceExtractor: com.codeborne.selenide.impl.WebPageSourceExtractor
+21:09:32.063 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins -- Using default implementation of com.codeborne.selenide.impl.PageObjectFactory: com.codeborne.selenide.impl.SelenidePageFactory
+21:09:32.076 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins -- Using default implementation of com.codeborne.selenide.impl.WebElementSelector: com.codeborne.selenide.impl.WebElementSelector
+21:09:32.078 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins -- Using default implementation of com.codeborne.selenide.impl.ElementDescriber: com.codeborne.selenide.impl.SelenideElementDescriber
+21:09:32.217 [Test worker] INFO com.codeborne.selenide.WebDriverThreadLocalContainer -- No webdriver is bound to current thread: 1 - let's create a new webdriver
+21:09:32.232 [Test worker] DEBUG com.codeborne.selenide.drivercommands.CreateDriverCommand -- Creating webdriver in thread 1 (ip: 10.0.85.2, host: PC)...
+21:09:32.233 [Test worker] DEBUG com.codeborne.selenide.webdriver.WebDriverFactory -- browser=chrome
+21:09:32.234 [Test worker] DEBUG com.codeborne.selenide.webdriver.WebDriverFactory -- browser.version=null
+21:09:32.234 [Test worker] DEBUG com.codeborne.selenide.webdriver.WebDriverFactory -- remote=http://localhost:4444/wd/hub
+21:09:32.234 [Test worker] DEBUG com.codeborne.selenide.webdriver.WebDriverFactory -- browserSize=1366x768
+21:09:32.242 [Test worker] DEBUG com.codeborne.selenide.webdriver.AbstractChromiumDriverFactory -- Using chromium preferences: {credentials_enable_service=false, autofill.credit_card_enabled=false, autofill.profile_enabled=false, safebrowsing.enabled=true, plugins.always_open_pdf_externally=true, profile.default_content_setting_values.automatic_downloads=1, profile.password_manager_enabled=false, profile.password_manager_leak_detection=false}
+21:09:33.821 [Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory -- Selenide 7.7.3 / Selenium 4.29.0 / chrome 128.0.6613.137 linux
+21:09:33.821 [Test worker] DEBUG com.codeborne.selenide.drivercommands.CreateDriverCommand -- Created webdriver in thread 1: RemoteWebDriver -&gt; RemoteWebDriver: chrome on linux (edf11bcf21f73f57d4e2232e56a1b20e), downloadsFolder: null
+21:09:33.823 [Test worker] DEBUG com.codeborne.selenide.drivercommands.DisposablesRegistry -- Register WebDriverInstance[threadId=1, config=StaticConfig, webDriver=RemoteWebDriver: chrome on linux (edf11bcf21f73f57d4e2232e56a1b20e), proxy=null, downloadsFolder=null] in 1 [size=1]
+21:09:33.837 [Test worker] DEBUG com.codeborne.selenide.drivercommands.DisposablesRegistry -- Add shutdown hook in 1 [size=1]
+21:09:34.127 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins -- Using default implementation of com.codeborne.selenide.commands.Clear: com.codeborne.selenide.commands.Clear
+21:09:34.159 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins -- Using default implementation of com.codeborne.selenide.impl.DownloadFileToFolder: com.codeborne.selenide.impl.DownloadFileToFolder
+21:09:34.162 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins -- Using default implementation of com.codeborne.selenide.impl.DownloadFileWithCdp: com.codeborne.selenide.impl.DownloadFileWithCdp
+21:09:34.167 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins -- Using default implementation of com.codeborne.selenide.commands.Commands: com.codeborne.selenide.commands.Commands
+21:09:34.211 [Test worker] DEBUG com.codeborne.selenide.impl.Plugins -- Using default implementation of com.codeborne.selenide.ex.ErrorFormatter: com.codeborne.selenide.ex.SelenideErrorFormatter
 </pre>
 </span>
 </div>
@@ -596,7 +142,7 @@ Caused by: java.nio.channels.ClosedChannelException
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.5</a> at 30 мар. 2025 г., 23:26:13</p>
+<a href="http://www.gradle.org">Gradle 8.5</a> at 4 апр. 2025 г., 21:09:42</p>
 </div>
 </div>
 </body>
