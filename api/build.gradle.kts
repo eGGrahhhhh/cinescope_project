@@ -3,7 +3,7 @@ import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 plugins {
     id("java")
     id("io.freefair.lombok") version "8.4"
-     id("io.qameta.allure") version "2.12.0"
+    id("io.qameta.allure") version "2.12.0"
 
 }
 
@@ -20,8 +20,10 @@ dependencies {
     implementation("io.rest-assured:rest-assured:5.5.0")
     implementation("com.fasterxml.jackson.core:jackson-databind:2.18.2")
     implementation("com.github.javafaker:javafaker:1.0.2")
-    //implementation("org.slf4j:slf4j-simple:2.0.16")
+    implementation("org.slf4j:slf4j-api:2.0.16")
     implementation("ch.qos.logback:logback-classic:1.5.16")
+    implementation("ch.qos.logback:logback-core:1.5.16")
+    implementation("org.aeonbits.owner:owner:1.0.4")
 
     implementation("com.codeborne:selenide:7.7.3")
 
@@ -35,6 +37,8 @@ dependencies {
 
 tasks.test {
     useJUnitPlatform()
+
+//    systemProperties.set(System.getProperties())
 
     testLogging {
         showStandardStreams = true

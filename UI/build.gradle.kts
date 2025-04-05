@@ -14,8 +14,9 @@ dependencies {
     implementation("com.codeborne:selenide:7.7.3")
     implementation("org.junit.jupiter:junit-jupiter:5.10.0")
     implementation("io.github.bonigarcia:webdrivermanager:5.9.2")
-    //implementation("org.slf4j:slf4j-simple:2.0.16")
+    implementation("org.slf4j:slf4j-api:2.0.16")
     implementation("ch.qos.logback:logback-classic:1.5.16")
+    implementation("ch.qos.logback:logback-core:1.5.16")
 
     runtimeOnly("org.aspectj:aspectjweaver:1.9.23")
     testImplementation("io.qameta.allure:allure-selenide:2.29.0")
