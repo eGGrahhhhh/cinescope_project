@@ -1,7 +1,9 @@
-.idea
+.idea/
+.gradle/
+.allure/
+build/
 .surefire-reports
-UI/build/reports
-build/allure
+UI/build/
 .allure-results
-ui/build/allure-results
-api/build/allure-results
+ui/build/
+api/build/
