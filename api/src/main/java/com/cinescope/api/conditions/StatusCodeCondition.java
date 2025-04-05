@@ -15,6 +15,6 @@ public class StatusCodeCondition implements Condition{
 
     @Override
     public String toString() {
-        return "status code is" + statusCode;
+        return "status code is " + statusCode;
     }
 }
