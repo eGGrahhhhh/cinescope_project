@@ -13,7 +13,7 @@ repositories {
 dependencies {
     implementation("com.codeborne:selenide:7.7.3")
     implementation("org.junit.jupiter:junit-jupiter:5.10.0")
-    //implementation("io.github.bonigarcia:webdrivermanager:5.9.2")
+    implementation("io.github.bonigarcia:webdrivermanager:5.9.2")
     //implementation("org.slf4j:slf4j-simple:2.0.16")
     implementation("ch.qos.logback:logback-classic:1.5.16")
 
