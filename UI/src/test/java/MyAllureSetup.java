@@ -13,7 +13,7 @@ public class MyAllureSetup implements BeforeAllCallback {
     @Override
     public void beforeAll(ExtensionContext extensionContext) throws Exception {
         Configuration.baseUrl = "https://cinescope.t-qa.ru";
-        Configuration.remote = "http://localhost:4444/wd/hub";
+        Configuration.remote = "http://localhost:4444"; ///wd/hub
         //Configuration.reportsFolder = "target/surefire-reports";
         //Configuration.downloadsFolder = "target/downloads";
 
