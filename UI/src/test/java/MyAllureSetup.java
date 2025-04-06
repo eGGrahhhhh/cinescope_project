@@ -1,6 +1,9 @@
+
+import com.cinescope.ui.ProjectConfig;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
+import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.extension.BeforeAllCallback;
 import org.junit.jupiter.api.extension.ExtensionContext;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -12,8 +15,9 @@ public class MyAllureSetup implements BeforeAllCallback {
 
     @Override
     public void beforeAll(ExtensionContext extensionContext) throws Exception {
-        Configuration.baseUrl = "https://cinescope.t-qa.ru";
-        Configuration.remote = "http://localhost:4444/wd/hub";
+        ProjectConfig config = ConfigFactory.create(ProjectConfig.class, System.getProperties());
+        Configuration.baseUrl = config.baseUrl();
+        Configuration.remote = config.remote();
         //Configuration.reportsFolder = "target/surefire-reports";
         //Configuration.downloadsFolder = "target/downloads";
 
