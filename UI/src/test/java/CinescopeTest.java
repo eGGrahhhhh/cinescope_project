@@ -14,7 +14,7 @@ public class CinescopeTest {
     @Description("Вход в аккаунт и покупка билетов")
     @CsvSource({
             "ivan333@gmail.com, Qq12345678, Тайна Коко, 1",
-            "ivan333@gmail.com, Qq12345678, Темный рыцарь, 2"
+            "ivan333@gmail.com, Qq12345678, Москва слезам не верит, 2"
     })
     @ParameterizedTest
     public void loginAndBuyTicketTest(String mail, String password, String titleOfMovie, String amountOfTicket) {
@@ -28,7 +28,7 @@ public class CinescopeTest {
 
     @Description("Регистрация нового пользователя")
     @CsvSource({
-            "Qwe Rty Uio, wrewrwer@gmail.com, Qq12345678, ТQq12345678"
+            "Qwe Rty Uio, wrewrwer@gmail.com, Qq12345678, Qq12345678"
     })
     @ParameterizedTest
     public void registerTest(String name, String mail, String password, String rePassword) {
