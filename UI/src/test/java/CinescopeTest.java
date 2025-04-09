@@ -1,10 +1,14 @@
 import com.cinescope.api.*;
+import com.cinescope.api.payloads.UserPayload;
+import com.cinescope.api.services.UserApiService;
 import com.cinescope.ui.*;
 import jdk.jfr.Description;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+
+import static com.cinescope.api.conditions.Conditions.statusCode;
 
 @ExtendWith(MyAllureSetup.class)
 public class CinescopeTest {
@@ -25,7 +29,7 @@ public class CinescopeTest {
         userApiService.registerUser(user)
                 .shouldHave(statusCode(201));
 
-        RegisterPage.open().registerAs(user.fullName(), user.email(), user.password(), user.password());
+        RegisterPage.open().registerAs(user.fullName(), user.email(), user.password(), user.passwordRepeat());
     }
 
 

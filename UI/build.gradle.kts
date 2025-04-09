@@ -1,6 +1,7 @@
 plugins {
     id("java")
     id("io.qameta.allure") version "2.12.0"
+    id("io.freefair.lombok") version "8.4"
 }
 
 group = "org.example"
