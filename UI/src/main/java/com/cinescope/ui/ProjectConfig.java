@@ -7,4 +7,6 @@ public interface ProjectConfig extends Config {
 
     String remote();
     String baseUrl();
+    String baseApiUrl();
+    String locale();
 }

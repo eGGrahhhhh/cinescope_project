@@ -1,5 +1,7 @@
+import com.cinescope.api.*;
 import com.cinescope.ui.*;
 import jdk.jfr.Description;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -7,9 +9,25 @@ import org.junit.jupiter.params.provider.CsvSource;
 @ExtendWith(MyAllureSetup.class)
 public class CinescopeTest {
 
+    private final UserApiService userApiService = new UserApiService();
+
     MainPage mainPage = new MainPage();
     MoviePage moviePage = new MoviePage();
     PaymentPage paymentPage = new PaymentPage();
+
+
+    @Test
+    @Description("Регистрация нового пользователя")
+    public void registerNewUserWithValidCredentialsTest() {
+        //given
+        UserPayload user = UserGenerator.generateRandomUser();
+        //expect
+        userApiService.registerUser(user)
+                .shouldHave(statusCode(201));
+
+        RegisterPage.open().registerAs(user.fullName(), user.email(), user.password(), user.password());
+    }
+
 
     @Description("Вход в аккаунт и покупка билетов")
     @CsvSource({
@@ -17,31 +35,23 @@ public class CinescopeTest {
             "ivan333@gmail.com, Qq12345678, Москва слезам не верит, 2"
     })
     @ParameterizedTest
-    public void loginAndBuyTicketTest(String mail, String password, String titleOfMovie, String amountOfTicket) {
-        LoginPage loginPage = LoginPage.open();
-        loginPage.loginAs(mail, password);
+    public void loginAndBuyTicketWithValidCredentialsTest(String mail, String password, String titleOfMovie, String amountOfTicket) {
+        LoginPage.open()
+                .loginAs(mail, password);
         mainPage.openMovie(titleOfMovie);
         moviePage.addToBucket();
         paymentPage.inputCardData(amountOfTicket);
         paymentPage.sendCardData();
     }
 
-    @Description("Регистрация нового пользователя")
-    @CsvSource({
-            "Qwe Rty Uio, wrewrwer@gmail.com, Qq12345678, Qq12345678"
-    })
-    @ParameterizedTest
-    public void registerTest(String name, String mail, String password, String rePassword) {
-        RegisterPage registerPage = RegisterPage.open();
-        registerPage.registerAs(name, mail, password, rePassword);
-    }
+
     @Description("Вход в аккаунт")
     @CsvSource({
             "ivan333@gmail.com, Qq12345678"
     })
     @ParameterizedTest
-    public void loginTest(String mail, String password) {
-        LoginPage loginPage = LoginPage.open();
-        loginPage.loginAs(mail, password);
+    public void userCanLoginWithValidCredentialsTest(String mail, String password) {
+        LoginPage.open()
+                .loginAs(mail, password);
     }
 }

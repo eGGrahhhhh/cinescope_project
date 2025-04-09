@@ -13,12 +13,14 @@ repositories {
 dependencies {
     implementation("com.codeborne:selenide:7.7.3")
     implementation("org.junit.jupiter:junit-jupiter:5.10.0")
+    implementation("io.rest-assured:rest-assured:5.5.0")
     implementation("io.github.bonigarcia:webdrivermanager:5.9.2")
     implementation("org.slf4j:slf4j-api:2.0.16")
     implementation("ch.qos.logback:logback-classic:1.5.16")
     implementation("ch.qos.logback:logback-core:1.5.16")
     implementation("org.aeonbits.owner:owner:1.0.4")
-
+    implementation("com.github.javafaker:javafaker:1.0.2")
+    implementation(project(":api"))
 
     runtimeOnly("org.aspectj:aspectjweaver:1.9.23")
     testImplementation("io.qameta.allure:allure-selenide:2.29.0")

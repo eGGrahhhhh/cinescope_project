@@ -2,13 +2,16 @@
 import com.cinescope.ui.ProjectConfig;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
+import com.github.javafaker.Faker;
 import io.qameta.allure.selenide.AllureSelenide;
+import io.restassured.RestAssured;
 import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.extension.BeforeAllCallback;
 import org.junit.jupiter.api.extension.ExtensionContext;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
 
 public class MyAllureSetup implements BeforeAllCallback {
@@ -17,9 +20,10 @@ public class MyAllureSetup implements BeforeAllCallback {
     public void beforeAll(ExtensionContext extensionContext) throws Exception {
         ProjectConfig config = ConfigFactory.create(ProjectConfig.class, System.getProperties());
         Configuration.baseUrl = config.baseUrl();
-        Configuration.remote = config.remote();
+        Configuration.remote = config.remote(); //"http://localhost:4444/wd/hub"
         //Configuration.reportsFolder = "target/surefire-reports";
         //Configuration.downloadsFolder = "target/downloads";
+        RestAssured.baseURI = config.baseApiUrl();
 
         Map<String, Boolean> options = new HashMap<>();
         options.put("enableVNC", true);
