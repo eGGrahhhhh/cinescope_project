@@ -7,4 +7,5 @@ public interface ProjectConfig extends Config {
 
     String baseApiUrl();
     String locale();
+    boolean logging();
 }

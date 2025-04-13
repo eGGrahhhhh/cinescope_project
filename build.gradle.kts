@@ -16,13 +16,12 @@ allprojects {
     }
 
 
-    tasks.withType<JavaCompile> { //tasks.withType<JavaCompile>().configureEach
+    tasks.withType<JavaCompile> {
         options.encoding = "UTF-8"
     }
 
     tasks.withType<Test> {
         useJUnitPlatform()
-        //systemProperty("allure.results.directory", rootProject.file("allure-results"))
 
         testLogging {
             showStandardStreams = true

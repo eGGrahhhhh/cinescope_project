@@ -21,8 +21,6 @@ public class MyAllureSetup implements BeforeAllCallback {
         ProjectConfig config = ConfigFactory.create(ProjectConfig.class, System.getProperties());
         Configuration.baseUrl = config.baseUrl();
         Configuration.remote = config.remote(); //"http://localhost:4444/wd/hub"
-        //Configuration.reportsFolder = "target/surefire-reports";
-        //Configuration.downloadsFolder = "target/downloads";
         RestAssured.baseURI = config.baseApiUrl();
 
         Map<String, Boolean> options = new HashMap<>();
