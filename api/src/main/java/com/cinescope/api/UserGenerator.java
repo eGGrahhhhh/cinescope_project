@@ -17,7 +17,7 @@ public class UserGenerator {
     public static UserPayload generateRandomUser() {
         String fullName = faker.name().fullName();
         String email = faker.internet().emailAddress();
-        String password = "Qq12345678!";
+        String password = "Qq12345678";
 
         UserPayload user = new UserPayload()
                 .fullName(fullName)

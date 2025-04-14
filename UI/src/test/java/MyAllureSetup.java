@@ -1,8 +1,6 @@
-
 import com.cinescope.ui.ProjectConfig;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
-import com.github.javafaker.Faker;
 import io.qameta.allure.selenide.AllureSelenide;
 import io.restassured.RestAssured;
 import org.aeonbits.owner.ConfigFactory;
@@ -11,7 +9,6 @@ import org.junit.jupiter.api.extension.ExtensionContext;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.util.HashMap;
-import java.util.Locale;
 import java.util.Map;
 
 public class MyAllureSetup implements BeforeAllCallback {
