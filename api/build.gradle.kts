@@ -24,8 +24,8 @@ dependencies {
     implementation("ch.qos.logback:logback-classic:1.5.16")
     implementation("ch.qos.logback:logback-core:1.5.16")
     implementation("org.aeonbits.owner:owner:1.0.4")
-
     implementation("com.codeborne:selenide:7.7.3")
+    implementation("io.qameta.allure:allure-rest-assured:2.29.0")
 
     runtimeOnly("org.aspectj:aspectjweaver:1.9.23")
 }
