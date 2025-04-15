@@ -2,7 +2,9 @@ package com.cinescope.ui;
 
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
+import org.openqa.selenium.WebElement;
 
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 public class PaymentPage {
@@ -19,6 +21,7 @@ public class PaymentPage {
     private final SelenideElement cardMonthField = $x("//select[@aria-hidden='true' and preceding-sibling::button[@id='month']]");
     private final SelenideElement cardYearField = $x("//select[@aria-hidden='true' and preceding-sibling::button[@id='year']]");
     private final SelenideElement submitBtn = $("[data-qa-id='payment_submit_button']");
+    private final SelenideElement successMessage = $("[class='text-xl mt-5']");
 
 
     private final String VALID_CARD_NUMBER = "4242424242424242";
@@ -39,5 +42,9 @@ public class PaymentPage {
 
     public void sendCardData() {
         submitBtn.click();
+    }
+
+    public String getSuccessMessage(){
+        return successMessage.getOwnText();
     }
 }

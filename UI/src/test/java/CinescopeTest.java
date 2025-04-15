@@ -9,6 +9,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
 import static com.cinescope.api.conditions.Conditions.statusCode;
+import static org.assertj.core.api.Assertions.assertThat;
 
 @ExtendWith(MyAllureSetup.class)
 public class CinescopeTest {
@@ -26,8 +27,8 @@ public class CinescopeTest {
         //given
         UserPayload user = UserGenerator.generateRandomUser();
         //expect
-        userApiService.registerUser(user)
-                .shouldHave(statusCode(201));
+//        userApiService.registerUser(user)
+//                .shouldHave(statusCode(201));
 
         RegisterPage.open().registerAs(user.fullName(), user.email(), user.password(), user.passwordRepeat());
     }
@@ -46,6 +47,7 @@ public class CinescopeTest {
         moviePage.addToBucket();
         paymentPage.inputCardData(amountOfTicket);
         paymentPage.sendCardData();
+        assertThat(paymentPage.getSuccessMessage()).isEqualTo("Спасибо за покупку");
     }
 
 

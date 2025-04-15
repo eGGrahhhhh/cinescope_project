@@ -24,6 +24,7 @@ dependencies {
     implementation(project(":api"))
 
     runtimeOnly("org.aspectj:aspectjweaver:1.9.23")
+    testImplementation("org.assertj:assertj-core:3.26.3")
     testImplementation("io.qameta.allure:allure-selenide:2.29.0")
     testImplementation("io.qameta.allure:allure-junit5:2.29.0")
     testImplementation("io.qameta.allure:allure-java-commons:2.29.0")
