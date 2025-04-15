@@ -12,7 +12,7 @@ node {
 
     stage("run api and ui tests"){
         sh 'chmod +x ./gradlew'
-        sh "./gradlew test -Dlogging=true"
+        sh "./gradlew test -Dlogging=${LOGGING}"
     }
 
 }
