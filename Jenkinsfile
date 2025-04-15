@@ -6,22 +6,19 @@ node {
     }
 
     stage("build"){
-        sh 'chmod +x ./gradlew'
+        sh "chmod +x ./gradlew"
         sh "./gradlew clean assemble"
     }
 
     stage("run api and ui tests"){
-        sh 'chmod +x ./gradlew'
+        sh "chmod +x ./gradlew"
         sh "./gradlew test -Dlogging=${LOGGING}"
     }
 
-    allure {
+    allure{
         jdk: '',
         properties: [],
         reportBuildPolicy: 'ALWAYS',
-        results: [
-            [path: 'api/build/allure-results'],
-            [path: 'ui/build/allure-results']
-        ]
+        results: [[path: 'api/build/allure-results'],[path: 'ui/build/allure-results']]
     }
 }
