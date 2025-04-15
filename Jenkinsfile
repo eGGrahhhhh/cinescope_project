@@ -15,11 +15,13 @@ node {
         sh "./gradlew test -Dlogging=${LOGGING}"
     }
 
-    allure{
-        includeProperties: false,
+    allure {
         jdk: '',
         properties: [],
-        reportBuildPolicy: 'ALWAYS'
-        results: [[path: 'api/build/allure-results'], [path: 'ui/build/allure-results']]
+        reportBuildPolicy: 'ALWAYS',
+        results: [
+            [path: 'api/build/allure-results'],
+            [path: 'ui/build/allure-results']
+        ]
     }
 }
