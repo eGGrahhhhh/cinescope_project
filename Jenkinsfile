@@ -18,6 +18,8 @@ node {
     allure{
         includeProperties: false,
         jdk: '',
+        properties: [],
+        reportBuildPolicy: 'ALWAYS'
         results: [[path: 'api/build/allure-results'], [path: 'ui/build/allure-results']]
     }
 }
