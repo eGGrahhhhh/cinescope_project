@@ -9,7 +9,8 @@ node {
         sh "./gradlew clean assemble"
     }
 
-    stage("run api and ui tests")
+    stage("run api and ui tests"){
         sh "./gradlew test -Dlogging=true"
+    }
 
 }
