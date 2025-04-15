@@ -15,4 +15,9 @@ node {
         sh "./gradlew test -Dlogging=${LOGGING}"
     }
 
+    allure{
+        includeProperties: false,
+        jdk: '',
+        results: [[path: 'api/build/allure-results'], [path: 'ui/build/allure-results']]
+    }
 }
