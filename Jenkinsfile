@@ -15,6 +15,21 @@ node {
         sh "./gradlew test -Dlogging=${LOGGING}"
     }
 
+    stage('Parallel Tests') {
+            parallel {
+                stage('API tests') {
+                    steps {
+                        sh './gradlew test -Dgroups=API tests'
+                    }
+                }
+                stage('UI tests') {
+                    steps {
+                        sh './gradlew test -Dgroups=regression-UI tests'
+                    }
+                }
+            }
+        }
+
     allure([
         jdk: '',
         properties: [],

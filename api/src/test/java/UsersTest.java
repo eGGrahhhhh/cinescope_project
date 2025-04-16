@@ -5,6 +5,7 @@ import io.restassured.RestAssured;
 import jdk.jfr.Description;
 import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import com.cinescope.api.payloads.UserPayload;
 
@@ -14,6 +15,7 @@ import static org.hamcrest.Matchers.isEmptyString;
 import static org.hamcrest.Matchers.not;
 
 
+@Tag("API tests")
 public class UsersTest {
 
     private final UserApiService userApiService = new UserApiService();

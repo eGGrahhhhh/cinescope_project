@@ -3,6 +3,7 @@ import com.cinescope.api.payloads.UserPayload;
 import com.cinescope.api.services.UserApiService;
 import com.cinescope.ui.*;
 import jdk.jfr.Description;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -11,6 +12,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 import static com.cinescope.api.conditions.Conditions.statusCode;
 import static org.assertj.core.api.Assertions.assertThat;
 
+@Tag("UI tests")
 @ExtendWith(MyAllureSetup.class)
 public class CinescopeTest {
 
@@ -27,13 +29,11 @@ public class CinescopeTest {
         //given
         UserPayload user = UserGenerator.generateRandomUser();
         //expect
-//        userApiService.registerUser(user)
-//                .shouldHave(statusCode(201));
-
         RegisterPage.open().registerAs(user.fullName(), user.email(), user.password(), user.passwordRepeat());
     }
 
 
+    @Tag("")
     @Description("Вход в аккаунт и покупка билетов")
     @CsvSource({
             "ivan333@gmail.com, Qq12345678, Тайна Коко, 1",
@@ -52,12 +52,14 @@ public class CinescopeTest {
 
 
     @Description("Вход в аккаунт")
-    @CsvSource({
-            "ivan333@gmail.com, Qq12345678"
-    })
-    @ParameterizedTest
     public void userCanLoginWithValidCredentialsTest(String mail, String password) {
+         //given
+        UserPayload user = UserGenerator.generateRandomUser();
+        //expect
+        userApiService.registerUser(user)
+                .shouldHave(statusCode(201));
+
         LoginPage.open()
-                .loginAs(mail, password);
+                .loginAs(user.email(), user.password());
     }
 }
