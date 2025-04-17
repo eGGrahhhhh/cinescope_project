@@ -22,6 +22,7 @@ allprojects {
 
     tasks.withType<Test> {
         useJUnitPlatform()
+        maxParallelForks = 4
 
         testLogging {
             showStandardStreams = true
