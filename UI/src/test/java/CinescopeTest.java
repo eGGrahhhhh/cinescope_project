@@ -12,7 +12,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 import static com.cinescope.api.conditions.Conditions.statusCode;
 import static org.assertj.core.api.Assertions.assertThat;
 
-@Tag(value = "UI tests")
+@Tag(value = "UI_tests")
 @ExtendWith(MyAllureSetup.class)
 public class CinescopeTest {
 
@@ -33,7 +33,7 @@ public class CinescopeTest {
     }
 
 
-    @Tag("")
+
     @Description("Вход в аккаунт и покупка билетов")
     @CsvSource({
             "ivan333@gmail.com, Qq12345678, Тайна Коко, 1",
