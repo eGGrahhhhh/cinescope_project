@@ -27,10 +27,10 @@ node {
             }
         }
 
-    allure([
+    allure(
         jdk: '',
         properties: [],
         reportBuildPolicy: 'ALWAYS',
-        results: [[path: 'api/build/allure-results'],[path: 'ui/build/allure-results']]
-    ])
+        results: [[path: 'api/build/allure-results'], [path: 'ui/build/allure-results']]
+    )
 }
