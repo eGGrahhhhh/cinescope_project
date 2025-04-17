@@ -1,5 +1,5 @@
-pipeline {
-    agent any
+node {
+
 
     stage("checkout repo") {
         git branch: 'testVersion',
