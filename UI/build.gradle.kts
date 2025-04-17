@@ -33,7 +33,7 @@ dependencies {
 
 tasks.test {
     useJUnitPlatform()
-    maxParallelForks = 4
+    maxParallelForks = 2
 }
 
 tasks.withType<JavaCompile>().configureEach {

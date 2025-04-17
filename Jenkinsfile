@@ -14,12 +14,12 @@ node {
         parallel {
             stage('API tests') {
                 steps {
-                    sh "./gradlew test -Dgroups=API tests -Dlogging=${LOGGING}"
+                    sh "./gradlew test -Dgroups=API_tests -Dlogging=${LOGGING}"
                 }
             }
             stage('UI tests') {
                 steps {
-                    sh "./gradlew test -Dgroups=regression-UI tests -Dlogging=${LOGGING}"
+                    sh "./gradlew test -Dgroups=regression-UI_tests -Dlogging=${LOGGING}"
                 }
             }
         }
