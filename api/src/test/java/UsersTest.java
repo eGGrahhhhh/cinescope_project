@@ -15,7 +15,7 @@ import static org.hamcrest.Matchers.isEmptyString;
 import static org.hamcrest.Matchers.not;
 
 
-@Tag("API tests")
+@Tag(value = "API tests")
 public class UsersTest {
 
     private final UserApiService userApiService = new UserApiService();

@@ -12,7 +12,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 import static com.cinescope.api.conditions.Conditions.statusCode;
 import static org.assertj.core.api.Assertions.assertThat;
 
-@Tag("UI tests")
+@Tag(value = "UI tests")
 @ExtendWith(MyAllureSetup.class)
 public class CinescopeTest {
 
