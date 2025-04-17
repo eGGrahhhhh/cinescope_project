@@ -10,21 +10,18 @@ node {
         sh "./gradlew clean assemble"
     }
 
-    stage("run api and ui tests"){
-        sh "chmod +x ./gradlew"
-        sh "./gradlew test -Dlogging=${LOGGING}"
-    }
-
     stage('Parallel Tests') {
             parallel {
                 stage('API tests') {
                     steps {
-                        sh './gradlew test -Dgroups=API tests'
+                        sh "chmod +x ./gradlew"
+                        sh "./gradlew test -Dgroups=API tests -Dlogging=${LOGGING}"
                     }
                 }
                 stage('UI tests') {
                     steps {
-                        sh './gradlew test -Dgroups=regression-UI tests'
+                        sh "chmod +x ./gradlew"
+                        sh "./gradlew test -Dgroups=regression-UI tests -Dlogging=${LOGGING}"
                     }
                 }
             }
