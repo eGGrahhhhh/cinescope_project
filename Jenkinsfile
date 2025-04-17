@@ -19,7 +19,7 @@ node {
             }
             stage('UI tests') {
                 steps {
-                    sh "./gradlew test -Dgroups=regression-UI_tests -Dlogging=${LOGGING}"
+                    sh "./gradlew test -Dgroups=UI_tests -Dlogging=${LOGGING}"
                 }
             }
         }
