@@ -1,12 +1,12 @@
 pipeline {
     agent any
 
-    stage("checkout repo"){
+    stage("checkout repo") {
         git branch: 'testVersion',
         url: 'https://github.com/eGGrahhhhh/cinescope_project.git'
     }
 
-    stage("build"){
+    stage("build") {
         sh "chmod +x ./gradlew"
         sh "./gradlew clean assemble"
     }
@@ -14,7 +14,7 @@ pipeline {
     stage('Parallel Tests') {
             parallel {
                 stage('API tests') {
-                    steps
+                    steps {
                         sh "./gradlew test -Dgroups=API tests -Dlogging=${LOGGING}"
                     }
                 }
