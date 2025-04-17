@@ -1,4 +1,5 @@
-node {
+pipeline {
+    agent any
 
     stage("checkout repo"){
         git branch: 'testVersion',
@@ -13,24 +14,22 @@ node {
     stage('Parallel Tests') {
             parallel {
                 stage('API tests') {
-                    steps {
-                        sh "chmod +x ./gradlew"
+                    steps
                         sh "./gradlew test -Dgroups=API tests -Dlogging=${LOGGING}"
                     }
                 }
                 stage('UI tests') {
                     steps {
-                        sh "chmod +x ./gradlew"
                         sh "./gradlew test -Dgroups=regression-UI tests -Dlogging=${LOGGING}"
                     }
                 }
             }
         }
 
-    allure(
+    allure([
         jdk: '',
         properties: [],
         reportBuildPolicy: 'ALWAYS',
         results: [[path: 'api/build/allure-results'], [path: 'ui/build/allure-results']]
-    )
+        ])
 }
