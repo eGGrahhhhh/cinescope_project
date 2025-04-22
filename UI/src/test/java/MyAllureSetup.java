@@ -22,7 +22,7 @@ public class MyAllureSetup implements BeforeAllCallback {
 
         Map<String, Boolean> options = new HashMap<>();
         options.put("enableVNC", true);
-        options.put("enableVideo", true);
+        options.put("enableVideo", false);
         options.put("enableLog", true);
 
         ChromeOptions capabilities = new ChromeOptions();
