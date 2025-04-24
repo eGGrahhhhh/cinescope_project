@@ -11,16 +11,12 @@ node {
     }
 
     stage('Run API Tests') {
-        steps {
-            sh "./gradlew test -Dgroups=API_tests -Dlogging=${LOGGING}"
-        }
-    }
+        sh "./gradlew test -Dgroups=API_tests -Dlogging=${LOGGING}"
+            }
 
     stage('Run UI Tests') {
-        steps {
-            sh "./gradlew test -Dgroups=UI_tests -Dlogging=${LOGGING}"
-        }
-    }
+        sh "./gradlew test -Dgroups=UI_tests -Dlogging=${LOGGING}"
+            }
 
     allure([
         jdk: '',
