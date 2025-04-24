@@ -13,13 +13,18 @@ node {
     stage('Parallel Tests') {
         parallel(
             'API tests': {
-                steps {
-                    sh "./gradlew test -Dgroups=API_tests -Dlogging=${LOGGING}"
+                stage('API tests') {
+                    steps {
+                        sh "./gradlew test -Dgroups=API_tests -Dlogging=${LOGGING}"
+                    }
                 }
             },
+
             'UI tests': {
-                steps {
-                    sh "./gradlew test -Dgroups=UI_tests -Dlogging=${LOGGING}"
+                stage('UI tests') {
+                    steps {
+                        sh "./gradlew test -Dgroups=UI_tests -Dlogging=${LOGGING}"
+                    }
                 }
             }
         )
