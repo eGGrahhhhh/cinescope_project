@@ -11,18 +11,18 @@ node {
     }
 
     stage('Parallel Tests') {
-        parallel {
-            stage('API tests') {
+        parallel(
+            'API tests': {
                 steps {
                     sh "./gradlew test -Dgroups=API_tests -Dlogging=${LOGGING}"
                 }
-            }
-            stage('UI tests') {
+            },
+            'UI tests': {
                 steps {
                     sh "./gradlew test -Dgroups=UI_tests -Dlogging=${LOGGING}"
                 }
             }
-        }
+        )
     }
 
     allure([
