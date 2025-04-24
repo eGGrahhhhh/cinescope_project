@@ -10,24 +10,16 @@ node {
         sh "./gradlew clean assemble"
     }
 
-    stage('Parallel Tests') {
-        parallel(
-            'API tests': {
-                stage('API tests') {
-                    steps {
-                        sh "./gradlew test -Dgroups=API_tests -Dlogging=${LOGGING}"
-                    }
-                }
-            },
+    stage('Run API Tests') {
+        steps {
+            sh "./gradlew test -Dgroups=API_tests -Dlogging=${LOGGING}"
+        }
+    }
 
-            'UI tests': {
-                stage('UI tests') {
-                    steps {
-                        sh "./gradlew test -Dgroups=UI_tests -Dlogging=${LOGGING}"
-                    }
-                }
-            }
-        )
+    stage('Run UI Tests') {
+        steps {
+            sh "./gradlew test -Dgroups=UI_tests -Dlogging=${LOGGING}"
+        }
     }
 
     allure([

@@ -26,6 +26,7 @@ public class CinescopeTest {
     @Test
     @Description("Регистрация нового пользователя")
     public void registerNewUserWithValidCredentialsTest() {
+        System.out.println("______________Запущен registerNewUserWithValidCredentialsTest ");
         //given
         UserPayload user = UserGenerator.generateRandomUser();
         //expect
@@ -41,6 +42,7 @@ public class CinescopeTest {
     })
     @ParameterizedTest
     public void loginAndBuyTicketWithValidCredentialsTest(String mail, String password, String titleOfMovie, String amountOfTicket) {
+        System.out.println("______________Запущен loginAndBuyTicketWithValidCredentialsTest ");
         LoginPage.open()
                 .loginAs(mail, password);
         mainPage.openMovie(titleOfMovie);
@@ -50,10 +52,11 @@ public class CinescopeTest {
         assertThat(paymentPage.getSuccessMessage()).isEqualTo("Спасибо за покупку");
     }
 
-
+    @Test
     @Description("Вход в аккаунт")
-    public void userCanLoginWithValidCredentialsTest(String mail, String password) {
-         //given
+    public void userCanLoginWithValidCredentialsTest() {
+        System.out.println("______________Запущен userCanLoginWithValidCredentialsTest ");
+        //given
         UserPayload user = UserGenerator.generateRandomUser();
         //expect
         userApiService.registerUser(user)
