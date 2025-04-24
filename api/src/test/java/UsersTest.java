@@ -30,7 +30,6 @@ public class UsersTest {
     @Test
     @Description("Регистрация нового пользователя")
     public void testCanRegisterNewUser() {
-        System.out.println("______________Запущен testCanRegisterNewUser ");
         //given
         UserPayload user = UserGenerator.generateRandomUser();
         //expect
@@ -42,7 +41,6 @@ public class UsersTest {
     @Test
     @Description("Регистрация двух одиинаковых пользователей")
     public void testCanNotRegisterSameNewUser() {
-        System.out.println("______________Запущен testCanNotRegisterSameNewUser ");
         //given
         UserPayload user = UserGenerator.generateRandomUser();
         //expect
@@ -57,7 +55,6 @@ public class UsersTest {
     @Test
     @Description("Регистрация нового пользователя и вход в аккаунт")
     public void testCanLoginNewUser() {
-        System.out.println("______________Запущен testCanLoginNewUser ");
         //given
         UserPayload user = UserGenerator.generateRandomUser();
         //expect

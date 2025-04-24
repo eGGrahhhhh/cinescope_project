@@ -32,7 +32,6 @@ dependencies {
 
 tasks.test {
     useJUnitPlatform()
-    maxParallelForks = 2
     systemProperties(System.getProperties().map { it.key.toString() to it.value.toString() }.toMap())
 
     testLogging {

@@ -26,13 +26,11 @@ public class CinescopeTest {
     @Test
     @Description("Регистрация нового пользователя")
     public void registerNewUserWithValidCredentialsTest() {
-        System.out.println("______________Запущен registerNewUserWithValidCredentialsTest ");
         //given
         UserPayload user = UserGenerator.generateRandomUser();
         //expect
         RegisterPage.open().registerAs(user.fullName(), user.email(), user.password(), user.passwordRepeat());
     }
-
 
 
     @Description("Вход в аккаунт и покупка билетов")
@@ -41,8 +39,12 @@ public class CinescopeTest {
             "ivan333@gmail.com, Qq12345678, Москва слезам не верит, 2"
     })
     @ParameterizedTest
-    public void loginAndBuyTicketWithValidCredentialsTest(String mail, String password, String titleOfMovie, String amountOfTicket) {
-        System.out.println("______________Запущен loginAndBuyTicketWithValidCredentialsTest ");
+    public void loginAndBuyTicketWithValidCredentialsTest(
+            String mail,
+            String password,
+            String titleOfMovie,
+            String amountOfTicket
+    ) {
         LoginPage.open()
                 .loginAs(mail, password);
         mainPage.openMovie(titleOfMovie);
@@ -55,7 +57,6 @@ public class CinescopeTest {
     @Test
     @Description("Вход в аккаунт")
     public void userCanLoginWithValidCredentialsTest() {
-        System.out.println("______________Запущен userCanLoginWithValidCredentialsTest ");
         //given
         UserPayload user = UserGenerator.generateRandomUser();
         //expect
