@@ -41,7 +41,7 @@ public class CinescopeTest {
     @Description("Вход в аккаунт и покупка билетов")
     @CsvSource({
             "ivan333@gmail.com, Qq12345678, Тайна Коко, 1",
-            "ivan333@gmail.com, Qq12345678, Москва слезам не верит, 2"
+            "ivan333@gmail.com, Qq12345678, Няшки, 2"
     })
     @ParameterizedTest
     public void loginAndBuyTicketWithValidCredentialsTest(
