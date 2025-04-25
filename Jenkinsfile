@@ -1,7 +1,6 @@
 node {
 
     stage("checkout repo") {
-        sh "ping github.com"
         git branch: 'testVersion',
         url: 'https://github.com/eGGrahhhhh/cinescope_project.git'
     }
