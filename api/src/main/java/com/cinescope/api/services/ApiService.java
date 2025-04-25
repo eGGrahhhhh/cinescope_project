@@ -16,7 +16,6 @@ import java.util.List;
 public class ApiService {
 
     protected RequestSpecification setup() {
-
         return RestAssured
                 .given()
                 .contentType(ContentType.JSON)

@@ -12,7 +12,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 import static com.cinescope.api.conditions.Conditions.statusCode;
 import static org.assertj.core.api.Assertions.assertThat;
 
-@Tag(value = "UI_tests")
+@Tag("UI_tests")
 @ExtendWith(MyAllureSetup.class)
 public class CinescopeTest {
 
@@ -29,7 +29,12 @@ public class CinescopeTest {
         //given
         UserPayload user = UserGenerator.generateRandomUser();
         //expect
-        RegisterPage.open().registerAs(user.fullName(), user.email(), user.password(), user.passwordRepeat());
+        RegisterPage.open()
+                .registerAs(
+                        user.fullName(),
+                        user.email(),
+                        user.password(),
+                        user.passwordRepeat());
     }
 
 

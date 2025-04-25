@@ -1,4 +1,4 @@
-import com.cinescope.ui.ProjectConfig;
+import com.cinescope.api.ProjectConfig;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
@@ -16,8 +16,8 @@ public class MyAllureSetup implements BeforeAllCallback {
     @Override
     public void beforeAll(ExtensionContext extensionContext) throws Exception {
         ProjectConfig config = ConfigFactory.create(ProjectConfig.class, System.getProperties());
-        Configuration.baseUrl = config.baseUrl();
-        Configuration.remote = config.remote(); //"http://localhost:4444/wd/hub"
+        Configuration.baseUrl = config.baseUiUrl();
+        Configuration.remote = config.remote(); // "http://localhost:4444/wd/hub"; //
         RestAssured.baseURI = config.baseApiUrl();
 
         Map<String, Boolean> options = new HashMap<>();

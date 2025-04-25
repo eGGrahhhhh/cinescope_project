@@ -22,7 +22,11 @@ allprojects {
 
     tasks.withType<Test> {
         useJUnitPlatform()
-        maxParallelForks = 2
+//        {
+//            includeTags("API_tests", "UI_tests")
+//            includeEngines("junit-jupiter")
+//        }
+//        //maxParallelForks = 4
 
         testLogging {
             showStandardStreams = true
