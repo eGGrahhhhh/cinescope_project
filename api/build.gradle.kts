@@ -30,15 +30,3 @@ dependencies {
     runtimeOnly("org.aspectj:aspectjweaver:1.9.23")
 }
 
-tasks.test {
-    useJUnitPlatform()
-    systemProperties(System.getProperties().map { it.key.toString() to it.value.toString() }.toMap())
-
-
-    testLogging {
-        showStandardStreams = true
-        events("started", "skipped", "passed", "failed")
-        exceptionFormat = TestExceptionFormat.FULL
-    }
-    outputs.upToDateWhen { false }
-}

@@ -1,7 +1,7 @@
 plugins {
     id("java")
-    id("io.qameta.allure") version "2.12.0"
     id("io.freefair.lombok") version "8.4"
+    id("io.qameta.allure") version "2.12.0"
 }
 
 group = "org.example"
@@ -31,16 +31,6 @@ dependencies {
     testImplementation("io.qameta.allure:allure-rest-assured:2.29.0")
 }
 
-tasks.test {
-    useJUnitPlatform()
-    systemProperties(System.getProperties().map { it.key.toString() to it.value.toString() }.toMap())
-}
-
 tasks.withType<JavaCompile>().configureEach {
     options.encoding = "UTF-8"
-}
-
-extensions.findByName("buildScan")?.withGroovyBuilder {
-    setProperty("termsOfServiceUrl", "https://gradle.com/terms-of-service")
-    setProperty("termsOfServiceAgree", "yes")
 }
