@@ -11,11 +11,11 @@ node {
     }
 
     stage('Run API Tests') {
-        sh "./gradlew test -Dgroups=API_tests -Dlogging=${LOGGING}"
+        sh "./gradlew api:test -Dlogging=${LOGGING}"
             }
 
     stage('Run UI Tests') {
-        sh "./gradlew test -Dgroups=UI_tests -Dlogging=${LOGGING}"
+        sh "./gradlew ui:test -Dlogging=${LOGGING}"
             }
 
     allure([
