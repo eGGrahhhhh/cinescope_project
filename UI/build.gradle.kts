@@ -33,6 +33,7 @@ dependencies {
 
 tasks.test {
     useJUnitPlatform()
+    systemProperties(System.getProperties().map { it.key.toString() to it.value.toString() }.toMap())
 }
 
 tasks.withType<JavaCompile>().configureEach {
